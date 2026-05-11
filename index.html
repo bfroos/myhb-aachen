@@ -37,8 +37,10 @@
       border-bottom: 1px solid #f0f0f0;
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-start;
       gap: 16px;
+      position: relative;
+      z-index: 100;
     }
     .header img { 
       max-width: 120px; 
@@ -55,6 +57,10 @@
       cursor: pointer;
       white-space: nowrap;
       transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+      position: relative;
+      z-index: 101;
       text-decoration: none;
       display: inline-block;
     }
@@ -994,7 +1000,7 @@
     }
 
     .faq-answer {
-      display: none;
+      display: none !important;
       padding: 16px 0;
       color: #555555;
       line-height: 1.6;
@@ -1002,7 +1008,7 @@
     }
 
     .faq-item.active .faq-answer {
-      display: block;
+      display: block !important;
     }
 
     .faq-icon {
@@ -1481,12 +1487,22 @@
     .modal-content {
       background: white;
       border-radius: 12px;
-      padding: 40px;
+      padding: 40px 24px;
       max-width: 450px;
       width: 90%;
+      max-height: 90vh;
+      overflow-y: auto;
       text-align: center;
       animation: slideUp 0.3s ease;
       position: relative;
+      margin: 20px;
+    }
+    
+    @media (min-width: 768px) {
+      .modal-content {
+        padding: 40px;
+        width: 450px;
+      }
     }
     @keyframes slideUp { from { transform: translateY(50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
     .modal-close {
@@ -2024,10 +2040,10 @@
 </div>
 
 <script>
-  // Modal nach 3 Sekunden öffnen
+  // Modal nach 30 Sekunden öffnen
   setTimeout(() => {
     document.getElementById('discountModal').classList.add('active');
-  }, 10000);
+  }, 30000);
 
   function closeModal() {
     document.getElementById('discountModal').classList.remove('active');
