@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>MY HEALTH &amp; BEAUTY – Wiedereröffnung Aachen | 2. Mai 2026</title>
-  <meta name="description" content="MY HEALTH &amp; BEAUTY Aachen im Aquis Plaza öffnet wieder am 2. Mai 2026. Jetzt Termin sichern – nur Ärzte behandeln, Botox &amp; Filler auch ohne Termin." />
+  <title>Lippenunterspritzung in Aachen – Hyaluron Filler | MY HEALTH &amp; BEAUTY</title>
+  <meta name="description" content="Lippenunterspritzung mit Hyaluron in Aachen. Kostenlose Beratung, sichtbare Ergebnisse, 20% Rabatt auf Deine erste Behandlung." />
 
   <!-- Open Graph für Social Ads -->
-  <meta property="og:title" content="Wir sind zurück in Aachen! 🎉" />
-  <meta property="og:description" content="MY HEALTH &amp; BEAUTY Aachen im Aquis Plaza – Wiedereröffnung am 2. Mai 2026. Jetzt Termin buchen." />
-  <meta property="og:image" content="https://media.myhb.app/cdn-cgi/image/width=1200,format=auto,quality=85,fit=scale-down/3/10/aquis_plaza_f84de3820b.jpg" />
+  <meta property="og:title" content="Lippen sanft aufspritzen in Aachen – Mit 20% Rabatt" />
+  <meta property="og:description" content="Lippenunterspritzung mit Hyaluron. Kostenlose Beratung mit Blick auf Deine Lippenunterspritzung." />
+  <meta property="og:image" content="https://media.myhealthandbeauty.app/cdn-cgi/image/width=1200,format=auto,quality=85,fit=scale-down/1/2/Screenshot_2026_02_03_at_14_16_41_dbcad724a9.png" />
   <meta property="og:url" content="https://aachen.myhealthandbeauty.com" />
   <meta property="og:type" content="website" />
 
@@ -18,93 +18,79 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      background-color: #f4f4f4;
-      color: #1a1a1a;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background-color: #ffffff;
+      color: #000000;
+      line-height: 1.6;
     }
 
     .page-wrapper {
-      max-width: 680px;
+      max-width: 1200px;
       margin: 0 auto;
       background: #ffffff;
-      box-shadow: 0 4px 32px rgba(0,0,0,0.10);
     }
 
     /* HEADER */
     .header {
       background: #ffffff;
-      padding: 28px 40px;
+      padding: 32px 40px;
       text-align: center;
-      border-bottom: 1px solid #eeeeee;
+      border-bottom: 1px solid #f0f0f0;
     }
-    .header img { max-width: 200px; display: block; margin: 0 auto; }
+    .header img { max-width: 160px; display: block; margin: 0 auto; }
 
-    /* HERO IMAGE */
-    .hero-img img {
-      width: 100%;
-      display: block;
-    }
-
-    /* HERO TEXT */
-    .hero-text {
-      background-color: #ffffff;
-      padding: 48px 40px 40px;
-      text-align: center;
-    }
-
-    /* COUNTDOWN */
-    .countdown-box {
-      display: inline-block;
+    /* ===== BLOCK 1: HERO ===== */
+    .hero {
+      padding: 80px 40px;
       background: #ffffff;
-      border: 2px solid #000000;
-      border-radius: 8px;
-      padding: 14px 32px;
-      margin-bottom: 28px;
     }
-    .countdown-label {
-      color: #666666;
-      font-size: 10px;
+
+    .hero-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero-left h2 {
+      font-size: 13px;
       letter-spacing: 2px;
       text-transform: uppercase;
+      color: #666666;
       font-weight: 600;
-      margin-bottom: 4px;
+      margin-bottom: 16px;
     }
-    .countdown-days {
-      color: #1a1a1a;
-      font-size: 32px;
+
+    .hero-left h1 {
+      font-size: 48px;
       font-weight: 700;
-      letter-spacing: 2px;
-      line-height: 1.1;
-    }
-    .countdown-date {
-      color: #666666;
-      font-size: 12px;
-      font-weight: 600;
-      margin-top: 4px;
-    }
-
-    .eyebrow {
-      color: #666666;
-      font-size: 11px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      font-weight: 600;
-      margin-bottom: 12px;
-    }
-
-    h1 {
-      font-size: 34px;
       line-height: 1.2;
-      font-weight: 700;
       margin-bottom: 20px;
-      color: #1a1a1a;
+      color: #000000;
     }
 
-    .hero-text p {
-      font-size: 16px;
-      line-height: 1.7;
+    .hero-left .subtitle {
+      font-size: 18px;
       color: #333333;
-      margin-bottom: 12px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      line-height: 1.4;
+    }
+
+    .hero-left p {
+      font-size: 16px;
+      color: #555555;
+      margin-bottom: 32px;
+      line-height: 1.6;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
     }
 
     .btn-primary {
@@ -112,158 +98,211 @@
       background-color: #000000;
       color: #ffffff;
       text-decoration: none;
-      padding: 16px 44px;
-      font-size: 13px;
-      letter-spacing: 1.5px;
+      padding: 16px 32px;
+      font-size: 14px;
+      letter-spacing: 1px;
       text-transform: uppercase;
-      font-weight: 700;
+      font-weight: 600;
       border-radius: 8px;
-      margin-top: 24px;
       transition: background 0.2s;
+      border: none;
+      cursor: pointer;
     }
     .btn-primary:hover { background-color: #222222; }
 
-    /* SOCIAL PROOF */
-    .social-proof {
-      margin: 32px auto 0;
-      max-width: 500px;
-      background: #ffffff;
-      border-left: 3px solid #000000;
-      padding: 18px 22px;
-      text-align: left;
-    }
-    .social-proof .stars { color: #000000; font-size: 18px; margin-bottom: 8px; }
-    .social-proof blockquote {
-      font-size: 14px;
-      line-height: 1.6;
-      font-style: italic;
-      color: #1a1a1a;
-      margin-bottom: 10px;
-    }
-    .social-proof cite {
-      font-size: 12px;
-      color: #666666;
-      font-weight: 600;
-      font-style: normal;
-    }
-
-    /* BEHANDLUNGEN */
-    .treatments {
-      padding: 48px 40px;
-      background: #ffffff;
-    }
-    .treatments .eyebrow { text-align: center; margin-bottom: 32px; }
-
-    .treatment-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 16px;
-    }
-
-    @media (max-width: 520px) {
-      .treatment-grid { grid-template-columns: 1fr 1fr; }
-      h1 { font-size: 26px; }
-      .hero-text, .treatments, .social-block, .club-section, .voucher-section, .cta-section { padding-left: 24px; padding-right: 24px; }
-      .header { padding: 20px 24px; }
-    }
-
-    .treatment-card {
-      background: #ffffff;
-      border-radius: 12px;
-      padding: 20px 14px;
-      text-align: center;
-    }
-    .treatment-card .icon { font-size: 28px; margin-bottom: 8px; }
-    .treatment-card h3 { font-size: 13px; font-weight: 700; color: #1a1a1a; margin-bottom: 4px; }
-    .treatment-card p { font-size: 11px; color: #666666; line-height: 1.4; }
-
-    /* SOCIAL BLOCK */
-    .social-block {
-      background: #111111;
-      padding: 48px 40px;
-      text-align: center;
-    }
-    .social-block .gold-label {
+    .btn-secondary {
+      display: inline-block;
+      background-color: #ffffff;
       color: #000000;
-      font-size: 11px;
-      letter-spacing: 3px;
+      text-decoration: none;
+      padding: 16px 32px;
+      font-size: 14px;
+      letter-spacing: 1px;
       text-transform: uppercase;
       font-weight: 600;
-      margin-bottom: 10px;
+      border-radius: 8px;
+      border: 2px solid #000000;
+      transition: all 0.2s;
     }
-    .social-block h2 {
+    .btn-secondary:hover { background-color: #f0f0f0; }
+
+    .hero-rating {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #000000;
+    }
+
+    .hero-rating .stars {
+      color: #ffc107;
+      font-size: 16px;
+      letter-spacing: 2px;
+    }
+
+    .hero-rating-text {
+      font-size: 13px;
+      color: #666666;
+    }
+
+    .hero-right img {
+      width: 100%;
+      border-radius: 12px;
+      display: block;
+      object-fit: cover;
+      height: auto;
+    }
+
+    /* Trust Symbols */
+    .trust-symbols {
+      margin-top: 60px;
+      text-align: center;
+      padding: 40px;
+      border-top: 1px solid #f0f0f0;
+    }
+
+    .trust-symbols p {
+      font-size: 12px;
+      color: #999999;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .trust-logos {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .trust-logos span {
+      font-size: 14px;
+      font-weight: 700;
+      color: #333333;
+    }
+
+    /* ===== BLOCK 2: VIDEO + TEXT ===== */
+    .video-section {
+      padding: 80px 40px;
+      background: #f8f8f8;
+    }
+
+    .video-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .video-left img {
+      width: 100%;
+      border-radius: 12px;
+      display: block;
+      object-fit: cover;
+    }
+
+    .video-right h2 {
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 24px;
+      color: #000000;
+    }
+
+    .video-right p {
+      font-size: 16px;
+      color: #555555;
+      line-height: 1.8;
+      margin-bottom: 0;
+    }
+
+    /* ===== BLOCK 3: TESTIMONIALS ===== */
+    .testimonials {
+      padding: 80px 40px;
+      background: #ffffff;
+    }
+
+    .testimonials-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .testimonial-card {
+      border-radius: 16px;
+      padding: 40px;
+      min-height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .testimonial-card.light {
+      background: #ffffff;
+      border: 1px solid #f0f0f0;
+    }
+
+    .testimonial-card.dark {
+      background: #000000;
       color: #ffffff;
-      font-size: 26px;
+    }
+
+    .testimonial-icon {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .testimonial-card h3 {
+      font-size: 18px;
       font-weight: 700;
       margin-bottom: 16px;
       line-height: 1.3;
     }
-    .social-block p {
-      color: #cccccc;
+
+    .testimonial-card p {
       font-size: 15px;
-      line-height: 1.6;
-      margin-bottom: 28px;
-      max-width: 460px;
-      margin-left: auto;
-      margin-right: auto;
+      line-height: 1.7;
+      margin-bottom: 20px;
+      flex-grow: 1;
     }
-    .social-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-    .btn-gold {
-      display: inline-block;
-      background-color: #000000;
+
+    .testimonial-card.light p {
+      color: #555555;
+    }
+
+    .testimonial-card.dark p {
+      color: #cccccc;
+    }
+
+    .testimonial-author {
+      font-size: 14px;
+      font-weight: 600;
+      margin-top: auto;
+    }
+
+    .testimonial-card.light .testimonial-author {
       color: #000000;
-      text-decoration: none;
-      padding: 14px 28px;
-      font-size: 12px;
+    }
+
+    .testimonial-card.dark .testimonial-author {
+      color: #ffffff;
+    }
+
+    .testimonial-stars {
+      color: #ffc107;
+      font-size: 14px;
       letter-spacing: 1px;
-      text-transform: uppercase;
-      font-weight: 700;
-      border-radius: 8px;
+      margin-top: 8px;
     }
 
-    /* INFOS */
-    .info-section {
-      background: #ffffff;
-      padding: 44px 40px;
-      text-align: center;
-    }
-    .info-section .eyebrow { margin-bottom: 20px; }
-    .info-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-      max-width: 480px;
-      margin: 0 auto;
-      text-align: left;
-    }
-    .info-item h4 { font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: #666666; font-weight: 700; margin-bottom: 6px; }
-    .info-item p { font-size: 14px; color: #333333; line-height: 1.6; }
-
-    /* CTA ABSCHLUSS */
-    .cta-section {
-      background: #ffffff;
-      padding: 48px 40px;
-      text-align: center;
-    }
-    .cta-section h2 { font-size: 26px; font-weight: 700; margin-bottom: 12px; color: #1a1a1a; }
-    .cta-section p { font-size: 15px; color: #555555; line-height: 1.6; margin-bottom: 28px; }
-
-    /* FOOTER */
-    .footer {
-      background: #111111;
-      padding: 36px 40px;
-      text-align: center;
-    }
-    .footer img { max-width: 140px; display: block; margin: 0 auto 20px; }
-    .footer p { color: #666666; font-size: 12px; line-height: 1.6; margin-bottom: 16px; }
-    .footer-links a {
-      color: #000000;
-      text-decoration: none;
-      font-size: 12px;
-      margin: 0 8px;
-    }
-
-    /* MODAL STYLES */
+    /* ===== MODAL STYLES ===== */
     .modal-overlay {
       display: none;
       position: fixed;
@@ -282,6 +321,7 @@
       width: 90%;
       text-align: center;
       animation: slideUp 0.3s ease;
+      position: relative;
     }
     @keyframes slideUp { from { transform: translateY(50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
     .modal-close {
@@ -299,6 +339,51 @@
     .modal-input { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 16px; font-size: 14px; }
     .modal-cta { display: inline-block; width: 100%; background: #000; color: white; padding: 14px; border-radius: 8px; text-decoration: none; font-weight: 700; cursor: pointer; border: none; }
     .modal-cta:hover { background: #222; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .hero-container,
+      .video-container,
+      .testimonials-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .hero-left h1 { font-size: 32px; }
+      .hero-left .subtitle { font-size: 16px; }
+      .hero-buttons { flex-direction: column; }
+      .btn-primary, .btn-secondary { width: 100%; text-align: center; }
+
+      .video-right h2 { font-size: 28px; }
+
+      .hero,
+      .video-section,
+      .testimonials,
+      .trust-symbols {
+        padding: 60px 24px;
+      }
+
+      .header { padding: 20px 24px; }
+      .hero-container { gap: 30px; }
+      .video-container { gap: 30px; }
+      .testimonials-container { gap: 24px; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-left h1 { font-size: 24px; }
+      .hero-left .subtitle { font-size: 14px; }
+      .video-right h2 { font-size: 22px; }
+      .testimonial-card { padding: 24px; min-height: auto; }
+
+      .hero,
+      .video-section,
+      .testimonials,
+      .trust-symbols {
+        padding: 48px 16px;
+      }
+
+      .trust-logos { gap: 20px; }
+    }
   </style>
 </head>
 <body>
@@ -310,146 +395,95 @@
          alt="MY HEALTH &amp; BEAUTY" />
   </div>
 
-  <!-- HERO IMAGE -->
-  <div class="hero-img">
-    <img src="https://media.myhb.app/cdn-cgi/image/width=680,format=auto,quality=85,fit=scale-down/3/10/aquis_plaza_f84de3820b.jpg"
-         alt="MY HEALTH &amp; BEAUTY Aachen Aquis Plaza" />
-  </div>
+  <!-- ===== BLOCK 1: HERO ===== -->
+  <div class="hero">
+    <div class="hero-container">
+      <div class="hero-left">
+        <h2>AQUIS PLAZA AACHEN</h2>
+        <h1>Lippen sanft aufspritzen</h1>
+        <p class="subtitle">Kostenlose Beratung mit Blick auf Deine Lippenunterspritzung</p>
+        <p>Mit sichtbaren Ergebnissen dank 20% Rabatt, zu einem günstigen Preis.</p>
+        
+        <div class="hero-buttons">
+          <a href="https://calendly.com/aquis-plaza-aachen" class="btn-primary" target="_blank">
+            Jetzt buchen
+          </a>
+          <a href="#" class="btn-secondary">
+            Mehr Infos
+          </a>
+        </div>
 
-  <!-- HERO TEXT -->
-  <div class="hero-text">
+        <div class="hero-rating">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <div>
+            <div>2.737+ 5-Sterne</div>
+            <div class="hero-rating-text">Google Bewertungen</div>
+          </div>
+        </div>
+      </div>
 
-    <!-- Countdown -->
-    <div class="countdown-box">
-      <div class="countdown-label">Countdown zur Wiedereröffnung</div>
-      <div class="countdown-days" id="countdown-days">⏳ Noch 6 Tage</div>
-      <div class="countdown-date">Samstag, 2. Mai 2026</div>
+      <div class="hero-right">
+        <img src="https://media.myhealthandbeauty.app/cdn-cgi/image/width=800,format=auto,quality=85,fit=scale-down/1/2/Screenshot_2026_02_03_at_14_16_41_dbcad724a9.png"
+             alt="Lippenunterspritzung – Ergebnis" />
+      </div>
     </div>
 
-    <div class="eyebrow">🎉 Große Wiedereröffnung</div>
-    <h1>Wir sind zurück –<br/>frisch renoviert in Aachen!</h1>
-
-    <p>
-      Ab dem <strong>2. Mai 2026</strong> strahlt unsere MY HEALTH &amp; BEAUTY Lounge
-      im <strong>Aquis Plaza Aachen</strong> in neuem Glanz. Die Renovierungsarbeiten sind
-      abgeschlossen – und wir freuen uns riesig, Dich wieder bei uns willkommen zu heißen!
-    </p>
-    <p>
-      Botox und Filler <strong>auch ohne Termin</strong> – und Du wirst
-      <strong>ausschließlich von Ärzten</strong> behandelt. Premium-Ästhetik, einfach &amp; unkompliziert.
-    </p>
-
-    <a href="https://calendly.com/aquis-plaza-aachen" class="btn-primary" target="_blank">
-      Jetzt Termin buchen →
-    </a>
-
-    <!-- Social Proof -->
-    <div class="social-proof">
-      <div class="stars">⭐⭐⭐⭐⭐</div>
-      <blockquote>
-        „Der neue my Health and Beauty Store in Aachen ist wunderschön eingerichtet.
-        Das Team ist unglaublich freundlich, kompetent und nimmt sich Zeit für eine individuelle Beratung.
-        Ich habe mich direkt wohlgefühlt und komme definitiv wieder – klare Empfehlung!"
-      </blockquote>
-      <cite>— Inga Roos, Google-Bewertung Aquis Plaza Aachen · 5,0 ⭐</cite>
-    </div>
-  </div>
-
-  <!-- BEHANDLUNGEN -->
-  <div class="treatments">
-    <div class="eyebrow">Unsere Treatments</div>
-    <div class="treatment-grid">
-      <div class="treatment-card">
-        <div class="icon">💉</div>
-        <h3>Botox®</h3>
-        <p>Zornesfalte, Stirn &amp; Augenpartie</p>
-      </div>
-      <div class="treatment-card">
-        <div class="icon">✨</div>
-        <h3>Hyaluron Filler</h3>
-        <p>Lippen, Wangen &amp; Contouring</p>
-      </div>
-      <div class="treatment-card">
-        <div class="icon">💧</div>
-        <h3>Profhilo</h3>
-        <p>Hautqualität &amp; Straffung</p>
-      </div>
-      <div class="treatment-card">
-        <div class="icon">⚡</div>
-        <h3>Vitamin Infusionen</h3>
-        <p>Energy, Glow &amp; Immunsystem</p>
-      </div>
-      <div class="treatment-card">
-        <div class="icon">🌿</div>
-        <h3>Mesotherapie</h3>
-        <p>Haut-Revitalisierung</p>
-      </div>
-      <div class="treatment-card">
-        <div class="icon">🩺</div>
-        <h3>Nur Ärzte</h3>
-        <p>Alle Behandlungen durch Mediziner</p>
+    <!-- Trust Symbols -->
+    <div class="trust-symbols">
+      <p>Vertraut von führenden Medien:</p>
+      <div class="trust-logos">
+        <span>WDR</span>
+        <span>Pro7</span>
+        <span>Focus</span>
+        <span>Stern</span>
+        <span>Die Welt</span>
       </div>
     </div>
   </div>
 
-  <!-- SOCIAL TEASER -->
-  <div class="social-block">
-    <div class="gold-label">🔒 Exklusiv für Follower</div>
-    <h2>🎊 Wir planen etwas Besonderes zur Wiedereröffnung!</h2>
-    <p>
-      Was genau? Das erfährst Du <strong style="color:#ffffff;">exklusiv zuerst</strong> auf
-      unseren Social-Media-Kanälen. Folge uns jetzt – und sei dabei, wenn wir es enthüllen! 🎁
-    </p>
-    <div class="social-buttons">
-      <a href="https://www.instagram.com/myhealthandbeauty.app/" target="_blank" class="btn-gold">
-        📸 Instagram folgen
-      </a>
-      <a href="https://www.tiktok.com/@myhealthandbeauty.app" target="_blank" class="btn-gold">
-        🎵 TikTok folgen
-      </a>
-    </div>
-  </div>
-
-  <!-- STANDORT-INFOS -->
-  <div class="info-section">
-    <div class="eyebrow">📍 Standort &amp; Öffnungszeiten</div>
-    <div class="info-grid">
-      <div class="info-item">
-        <h4>Adresse</h4>
-        <p>Aquis Plaza Aachen<br/>Adalbertstraße 100<br/>52062 Aachen<br/><em>UG gegenüber DM</em></p>
+  <!-- ===== BLOCK 2: VIDEO + TEXT ===== -->
+  <div class="video-section">
+    <div class="video-container">
+      <div class="video-left">
+        <img src="https://media.myhb.app/cdn-cgi/image/width=600,format=auto,quality=85,fit=scale-down/1/2/Influencerin_370f31f6cc.jpg"
+             alt="Lippenunterspritzung mit Hyaluron" />
       </div>
-      <div class="info-item">
-        <h4>Öffnungszeiten</h4>
-        <p>Mo – Sa<br/>10:00 – 20:00 Uhr<br/><br/>Walk-In willkommen!</p>
+
+      <div class="video-right">
+        <h2>Was ist eine Lippenunterspritzung mit Hyaluron?</h2>
+        <p>
+          Die Lippenunterspritzung mit Hyaluron ist eine fortschrittliche Methode der ästhetischen Medizin, 
+          die gezielt Volumen und Kontur in die Lippen bringt. Dabei wird hochwertiges Hyaluron, 
+          ein natürlicher Bestandteil der Haut, in die Lippen injiziert.
+        </p>
       </div>
     </div>
   </div>
 
-  <!-- CTA ABSCHLUSS -->
-  <div class="cta-section">
-    <h2>Sichere Dir jetzt Deinen Termin 🗓</h2>
-    <p>Sei dabei wenn wir wieder öffnen. Buche Deinen Wunschtermin direkt online – schnell, einfach, ohne Wartezeit.</p>
-    <a href="https://calendly.com/aquis-plaza-aachen" class="btn-primary" target="_blank">
-      Termin buchen – Aachen →
-    </a>
-    <p style="margin-top:20px;font-size:13px;color:#888888;">
-      Oder einfach vorbeikommen: Botox &amp; Filler auch ohne Termin ✓
-    </p>
-  </div>
+  <!-- ===== BLOCK 3: TESTIMONIALS ===== -->
+  <div class="testimonials">
+    <div class="testimonials-container">
+      <div class="testimonial-card light">
+        <div class="testimonial-icon">👍</div>
+        <h3>Das sagen unsere Kunden</h3>
+        <p>
+          Ich bin sehr zufrieden mit meiner Behandlung zum Lippenaufspritzen bei Dr. Bachar Wahbeh. 
+          Die Beratung war kompetent und ehrlich, Dr. Wahbeh hat sich viel Zeit genommen.
+        </p>
+        <div class="testimonial-author">
+          Jennifer S.
+          <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+        </div>
+      </div>
 
-  <!-- FOOTER -->
-  <div class="footer">
-    <img src="https://mcusercontent.com/414b7df2c15469ac4125b340b/images/b208e29a-c603-5e23-4c98-dd0ee57c64e2.png"
-         alt="MY HEALTH &amp; BEAUTY" />
-    <p>
-      MY HEALTH &amp; BEAUTY Clinic GmbH<br/>
-      Aquis Plaza Aachen · Adalbertstraße 100 · 52062 Aachen
-    </p>
-    <div class="footer-links">
-      <a href="https://www.myhealthandbeauty.com" target="_blank">Website</a>
-      <a href="https://www.instagram.com/myhealthandbeauty.app/" target="_blank">Instagram</a>
-      <a href="https://www.tiktok.com/@myhealthandbeauty.app" target="_blank">TikTok</a>
-      <a href="https://calendly.com/aquis-plaza-aachen" target="_blank">Termin buchen</a>
+      <div class="testimonial-card dark">
+        <div class="testimonial-icon">👎</div>
+        <h3>Wann ist eine andere Behandlung besser geeignet?</h3>
+        <p>
+          Bei sehr tiefen Falten oder starkem Volumenverlust können andere Behandlungen wie Filler kombiniert werden. 
+          Wir beraten Dich ehrlich.
+        </p>
+      </div>
     </div>
   </div>
 
@@ -496,27 +530,6 @@
     closeModal();
     alert('✅ Rabattcode wurde an ' + email + ' verschickt!');
   }
-
-  // Live-Countdown berechnen
-  function updateCountdown() {
-    const target = new Date('2026-05-02T10:00:00+02:00');
-    const now = new Date();
-    const diff = target - now;
-    if (diff <= 0) {
-      document.getElementById('countdown-days').textContent = '🎉 Wir haben geöffnet!';
-      return;
-    }
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-    if (days > 0) {
-      document.getElementById('countdown-days').textContent = `⏳ Noch ${days} Tag${days !== 1 ? 'e' : ''}`;
-    } else {
-      document.getElementById('countdown-days').textContent = `⏳ Noch ${hours}h ${mins}min`;
-    }
-  }
-  updateCountdown();
-  setInterval(updateCountdown, 60000);
 </script>
 
 </body>
