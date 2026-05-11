@@ -1,337 +1,519 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lippen aufspritzen Aachen – MY HEALTH & BEAUTY</title>
-    <meta name="description" content="Professionelle Lippenaufspritzung in Aachen. Ab 149€. Kostenlose Beratung. Jetzt Termin buchen!">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Lippen aufspritzen Aachen – MY HEALTH & BEAUTY | 150€</title>
+  <meta name="description" content="Lippen aufspritzen in Aachen mit Hyaluron. Professionelle Behandlung durch Ärzte. Ab 150€. Jetzt 20% Rabatt sichern!" />
+  
+  <meta property="og:title" content="Lippen aufspritzen Aachen – Premium Qualität von Profis" />
+  <meta property="og:description" content="Volumen & Definition für Deine Lippen. Mit Hyaluron, von erfahrenen Ärzten. Jetzt 20% Rabatt!" />
+  <meta property="og:image" content="https://media.myhb.app/cdn-cgi/image/width=1200,format=auto,quality=85,fit=scale-down/3/10/aquis_plaza_f84de3820b.jpg" />
+  <meta property="og:url" content="https://aachen.myhealthandbeauty.com/lippen" />
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background: #f9f7f4; color: #1a1a1a; }
+    .page-wrapper { max-width: 900px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 16px rgba(0,0,0,0.08); }
     
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-            color: #000;
-            line-height: 1.6;
-            background: #fff;
-        }
-        
-        /* Header - exactly like go. */
-        header {
-            background: white;
-            padding: 1.5rem 2rem;
-            border-bottom: 1px solid #e5e5e5;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        .header-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            font-size: 1rem;
-            font-weight: 600;
-            letter-spacing: 2px;
-            color: #000;
-            text-transform: uppercase;
-        }
-        
-        nav {
-            display: flex;
-            gap: 2rem;
-        }
-        
-        nav a {
-            color: #000;
-            text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 500;
-            transition: opacity 0.2s;
-        }
-        
-        nav a:hover {
-            opacity: 0.6;
-        }
-        
-        .header-cta {
-            background: #000;
-            color: #fff;
-            padding: 0.75rem 1.5rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 600;
-            transition: background 0.2s;
-        }
-        
-        .header-cta:hover {
-            background: #333;
-        }
-        
-        /* Hero Section - exactly like go. screenshot */
-        .hero {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-        
-        .hero-content h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
-            color: #000;
-        }
-        
-        .hero-content p {
-            font-size: 1.1rem;
-            color: #666;
-            margin-bottom: 2rem;
-            line-height: 1.8;
-        }
-        
-        .hero-ctas {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 3rem;
-        }
-        
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 1rem 2rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: all 0.2s;
-            border: none;
-            cursor: pointer;
-        }
-        
-        .btn-black {
-            background: #000;
-            color: #fff;
-        }
-        
-        .btn-black:hover {
-            background: #333;
-        }
-        
-        .btn-outline {
-            background: transparent;
-            color: #000;
-            border: 2px solid #000;
-        }
-        
-        .btn-outline:hover {
-            background: #000;
-            color: #fff;
-        }
-        
-        .hero-rating {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-        
-        .rating-badge {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            padding: 0.75rem 1.25rem;
-            background: #f8f8f8;
-            border-radius: 12px;
-        }
-        
-        .google-icon {
-            width: 24px;
-            height: 24px;
-        }
-        
-        .stars {
-            color: #FBB040;
-            font-size: 1rem;
-            letter-spacing: 1px;
-        }
-        
-        .rating-text {
-            font-size: 0.9rem;
-            color: #000;
-            font-weight: 600;
-        }
-        
-        .hero-image {
-            position: relative;
-            border-radius: 16px;
-            overflow: hidden;
-        }
-        
-        .hero-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        
-        /* Trust Symbols - like go. */
-        .trust-section {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 3rem 2rem;
-            text-align: center;
-            border-top: 1px solid #e5e5e5;
-        }
-        
-        .trust-title {
-            font-size: 0.9rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #999;
-            margin-bottom: 2rem;
-        }
-        
-        .trust-logos {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 3rem;
-            flex-wrap: wrap;
-        }
-        
-        .trust-logo {
-            height: 32px;
-            opacity: 0.4;
-            transition: opacity 0.2s;
-        }
-        
-        .trust-logo:hover {
-            opacity: 0.8;
-        }
-        
-        /* Responsive */
-        @media (max-width: 968px) {
-            .hero {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-                padding: 3rem 1.5rem;
-            }
-            
-            .hero-content h1 {
-                font-size: 2.2rem;
-            }
-            
-            .hero-ctas {
-                flex-direction: column;
-            }
-            
-            .btn {
-                width: 100%;
-            }
-            
-            nav {
-                display: none;
-            }
-        }
-        
-        /* Placeholder */
-        .placeholder {
-            text-align: center;
-            padding: 4rem 2rem;
-            background: #f8f8f8;
-            color: #666;
-            font-style: italic;
-        }
-    </style>
+    /* HEADER */
+    .header { background: #ffffff; padding: 20px 40px; text-align: center; border-bottom: 1px solid #eeeeee; }
+    .header img { max-width: 160px; display: block; margin: 0 auto; }
+    
+    /* HERO BLOCK */
+    .hero { 
+      background: linear-gradient(135deg, #F5E8E0 0%, #F9F5F2 100%);
+      padding: 60px 40px;
+      text-align: center;
+    }
+    .hero .badge { 
+      display: inline-block;
+      background: #000;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
+    .hero h1 { 
+      font-size: 42px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      line-height: 1.2;
+      color: #1a1a1a;
+    }
+    .hero .price { 
+      font-size: 24px;
+      color: #666;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    .hero p { 
+      font-size: 16px;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 32px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .cta-primary { 
+      display: inline-block;
+      background: #000;
+      color: #fff;
+      padding: 16px 44px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      letter-spacing: 1px;
+      transition: all 0.3s;
+      cursor: pointer;
+      border: none;
+      font-size: 14px;
+    }
+    .cta-primary:hover { background: #222; transform: translateY(-2px); }
+    
+    /* TRUST BLOCK */
+    .trust-block {
+      background: #fff;
+      padding: 40px;
+      text-align: center;
+      border-top: 1px solid #f0f0f0;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .trust-label { font-size: 12px; color: #666; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 16px; }
+    .logos { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; align-items: center; }
+    .logo-item { font-size: 12px; font-weight: 600; color: #666; }
+    
+    /* BEFORE/AFTER SLIDER */
+    .before-after-block {
+      padding: 60px 40px;
+      text-align: center;
+      background: #fff;
+    }
+    .before-after-block h2 { font-size: 32px; font-weight: 700; margin-bottom: 12px; }
+    .before-after-block .subtitle { font-size: 14px; color: #666; margin-bottom: 32px; font-weight: 600; }
+    .slider-container {
+      max-width: 500px;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      background: #f0f0f0;
+      height: 400px;
+    }
+    .slider-image { width: 100%; height: 100%; object-fit: cover; }
+    .slider-handle {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 4px;
+      height: 100%;
+      background: #000;
+      cursor: col-resize;
+    }
+    
+    /* TESTIMONIALS */
+    .testimonials-block {
+      background: #f9f7f4;
+      padding: 60px 40px;
+      text-align: center;
+    }
+    .testimonials-block h2 { font-size: 32px; font-weight: 700; margin-bottom: 40px; }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .testimonial-card {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: left;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .stars { color: #000; font-size: 16px; margin-bottom: 12px; }
+    .quote { font-size: 14px; font-style: italic; line-height: 1.6; color: #333; margin-bottom: 16px; }
+    .author { font-weight: 600; font-size: 13px; color: #1a1a1a; }
+    .location { font-size: 12px; color: #666; }
+    
+    /* FAQ BLOCK */
+    .faq-block {
+      padding: 60px 40px;
+      background: white;
+    }
+    .faq-block h2 { font-size: 32px; font-weight: 700; margin-bottom: 40px; text-align: center; }
+    .faq-item {
+      max-width: 600px;
+      margin: 0 auto 20px;
+      border: 1px solid #e0e0e0;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    .faq-question {
+      background: #f9f5f2;
+      padding: 18px 24px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+    .faq-question:hover { background: #f0e8e0; }
+    .faq-toggle { font-size: 18px; }
+    .faq-answer {
+      display: none;
+      padding: 24px;
+      background: white;
+      font-size: 14px;
+      line-height: 1.7;
+      color: #555;
+    }
+    .faq-answer.active { display: block; }
+    
+    /* INFO GRID */
+    .info-grid-block {
+      background: #111;
+      color: white;
+      padding: 60px 40px;
+      text-align: center;
+    }
+    .info-grid-block h2 { font-size: 32px; margin-bottom: 40px; }
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 40px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .info-item h3 { color: #000; font-size: 14px; margin-bottom: 8px; font-weight: 700; letter-spacing: 1px; }
+    .info-item p { font-size: 18px; font-weight: 600; color: white; }
+    
+    /* CTA SECTION */
+    .cta-section {
+      background: #F5E8E0;
+      padding: 60px 40px;
+      text-align: center;
+    }
+    .cta-section h2 { font-size: 36px; margin-bottom: 16px; font-weight: 700; }
+    .cta-section p { font-size: 16px; color: #555; margin-bottom: 32px; }
+    
+    /* MODAL */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.6);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+    }
+    .modal-overlay.active { display: flex; }
+    .modal-content {
+      background: white;
+      border-radius: 12px;
+      padding: 40px;
+      max-width: 450px;
+      width: 90%;
+      text-align: center;
+      animation: slideUp 0.3s ease;
+    }
+    @keyframes slideUp { from { transform: translateY(50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+    .modal-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      font-size: 24px;
+      cursor: pointer;
+      color: #999;
+    }
+    .modal-badge { display: inline-block; background: #000; color: white; padding: 8px 16px; border-radius: 20px; font-size: 12px; font-weight: 700; margin-bottom: 16px; }
+    .modal-title { font-size: 28px; font-weight: 700; margin-bottom: 12px; }
+    .modal-subtitle { font-size: 14px; color: #666; font-weight: 600; margin-bottom: 20px; }
+    .discount-badge { font-size: 48px; font-weight: 700; color: #000; margin: 20px 0; }
+    .modal-text { font-size: 14px; color: #666; line-height: 1.6; margin-bottom: 24px; }
+    .modal-input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      margin-bottom: 16px;
+      font-size: 14px;
+    }
+    .modal-cta { display: inline-block; width: 100%; background: #000; color: white; padding: 14px; border-radius: 12px; text-decoration: none; font-weight: 700; cursor: pointer; border: none; }
+    
+    /* FOOTER */
+    .footer {
+      background: #1a1a1a;
+      color: #ccc;
+      padding: 40px;
+      text-align: center;
+      font-size: 12px;
+    }
+    
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 32px; }
+      .info-grid { grid-template-columns: 1fr; gap: 20px; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .logos { gap: 12px; }
+      .hero { padding: 40px 24px; }
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Header - exactly like go. -->
-    <header>
-        <div class="header-content">
-            <div class="logo">MY HEALTH & BEAUTY</div>
-            <nav>
-                <a href="#">Botox</a>
-                <a href="#">Hyaluron</a>
-                <a href="#">Haare</a>
-                <a href="#">Fettweg</a>
-                <a href="#">Skinbooster</a>
-            </nav>
-            <a href="#" class="header-cta">Termin buchen</a>
-        </div>
-    </header>
+<div class="page-wrapper">
+  
+  <!-- HEADER -->
+  <div class="header">
+    <img src="https://mcusercontent.com/414b7df2c15469ac4125b340b/images/b208e29a-c603-5e23-4c98-dd0ee57c64e2.png" alt="MY HEALTH & BEAUTY" />
+  </div>
 
-    <!-- Hero Section - Block 1 (exactly like go. screenshot) -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Lippen sanft aufspritzen</h1>
-            <p>
-                Kostenlose Beratung mit Blick auf Deine Lippenunterspritzung samt Hyaluron. 
-                Mit sichtbaren Ergebnissen dank 20% Rabatt, zu einem günstigen Preis. 
-                Jetzt direkt buchen!
-            </p>
-            
-            <div class="hero-ctas">
-                <a href="#" class="btn btn-black">Termin buchen</a>
-                <a href="#" class="btn btn-outline">20% Rabatt</a>
-            </div>
-            
-            <div class="hero-rating">
-                <div class="rating-badge">
-                    <svg class="google-icon" viewBox="0 0 24 24" fill="none">
-                        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
-                        <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
-                        <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
-                        <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
-                    </svg>
-                    <div>
-                        <div class="stars">★★★★★</div>
-                        <div class="rating-text">2.737+ Bewertungen</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="hero-image">
-            <img src="https://media.myhealthandbeauty.app/cdn-cgi/image/width=800,format=auto,quality=85,fit=scale-down/1/2/Screenshot_2026_02_03_at_14_16_41_dbcad724a9.png" 
-                 alt="Lippen aufspritzen Aachen"
-                 loading="eager">
-        </div>
-    </section>
+  <!-- HERO BLOCK -->
+  <div class="hero">
+    <div class="badge">✨ PREMIUM HYALURON</div>
+    <h1>Volle, gesunde Lippen</h1>
+    <div class="price">ab 150€</div>
+    <p>Natürliche Volumen & Definition mit hochwertigem Hyaluron. Nur durch erfahrene Ärzte behandelt. Unsichtbare Ergebnisse, die sich natürlich anfühlen.</p>
+    <button class="cta-primary" onclick="scrollToBooking()">Termin buchen →</button>
+  </div>
 
-    <!-- Trust Symbols - exactly like go. -->
-    <section class="trust-section">
-        <div class="trust-title">Bekannt aus</div>
-        <div class="trust-logos">
-            <img src="https://media.myhb.app/uploads/logo_wdr_b8e19c4e68.svg" alt="WDR" class="trust-logo">
-            <img src="https://media.myhb.app/uploads/logo_welt_4a7c8f9b23.svg" alt="Die Welt" class="trust-logo">
-            <img src="https://media.myhb.app/uploads/logo_pro7_d9e17f8a45.svg" alt="Pro7" class="trust-logo">
-            <img src="https://media.myhb.app/uploads/logo_focus_e8c19f7d34.svg" alt="Focus" class="trust-logo">
-            <img src="https://media.myhb.app/uploads/logo_stern_f7d18e9c56.svg" alt="Stern" class="trust-logo">
-        </div>
-    </section>
-
-    <!-- Placeholder -->
-    <div class="placeholder">
-        <p><strong>Block 3-9 folgen nach deinem Feedback...</strong></p>
-        <p>Next: Before/After, Benefits (schwarze Box), Testimonials, FAQ, Doctor, Location Map</p>
+  <!-- TRUST BLOCK -->
+  <div class="trust-block">
+    <div class="trust-label">TRUSTED BY MILLIONS</div>
+    <div class="logos">
+      <div class="logo-item">📺 WDR</div>
+      <div class="logo-item">📰 Die Welt</div>
+      <div class="logo-item">📻 Pro7</div>
+      <div class="logo-item">📊 Focus</div>
+      <div class="logo-item">📰 Stern</div>
     </div>
+  </div>
+
+  <!-- BEFORE/AFTER SLIDER -->
+  <div class="before-after-block">
+    <h2>Sichtbare Ergebnisse</h2>
+    <div class="subtitle">Vorher & Nachher – echte Patienten</div>
+    <div class="slider-container">
+      <img src="https://images.unsplash.com/photo-1599613434395-18beded38709?w=500&h=400&fit=crop" alt="Before" class="slider-image" />
+      <div class="slider-handle"></div>
+    </div>
+    <p style="margin-top: 20px; font-size: 13px; color: #666;">← Schiebe nach links/rechts zum Vergleichen</p>
+  </div>
+
+  <!-- TESTIMONIALS -->
+  <div class="testimonials-block">
+    <h2>Was unsere Patienten sagen</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <div class="quote">"Natürliches Ergebnis, keine Überraschungen. Die Ärztin hat sich Zeit genommen und perfekt beraten."</div>
+        <div class="author">Sarah M.</div>
+        <div class="location">Aachen Aquis Plaza</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <div class="quote">"Super kompetent & freundlich. Der Termin war stressfreI und das Ergebnis perfekt für meine Lippen."</div>
+        <div class="author">Julia K.</div>
+        <div class="location">Aachen Aquis Plaza</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <div class="quote">"Endlich jemand, der wirklich Erfahrung hat. Völlig schmerzfrei und das Ergebnis hält lange."</div>
+        <div class="author">Anna B.</div>
+        <div class="location">Aachen Aquis Plaza</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <div class="quote">"Best decision! Keine Übertreatment, keine Probleme. Ich buche schon wieder einen Termin."</div>
+        <div class="author">Lisa F.</div>
+        <div class="location">Aachen Aquis Plaza</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ BLOCK -->
+  <div class="faq-block">
+    <h2>Häufig gestellte Fragen</h2>
+    
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <span>Wie lange hält das Ergebnis?</span>
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">
+        Die Ergebnisse halten normalerweise 6-9 Monate, je nach Körperstoffwechsel und Hyaluronart. Viele Patienten kommen nach 6-8 Monaten zu einer Auffrischung.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <span>Ist die Behandlung schmerzhaft?</span>
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">
+        Die meisten Patienten berichten nur von minimalen Beschwerden. Wir verwenden feines Hyaluron mit Betäubungsmittel, sodass die Behandlung sehr angenehm ist.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <span>Gibt es Nebenwirkungen?</span>
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">
+        Leichte Schwellungen oder Rötungen können 1-2 Tage auftreten. Ernsthafte Nebenwirkungen sind extrem selten, da wir nur geprüfte Materialien verwenden.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <span>Kann ich nach der Behandlung normal essen/trinken?</span>
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">
+        Ja, du kannst sofort normal essen und trinken. Wir empfehlen, den Mund die ersten 4 Stunden nicht zu berühren und auf sehr heiße Speisen zu verzichten.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <span>Wie verläuft die Beratung?</span>
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">
+        Unser Arzt nimmt sich 15-20 Minuten Zeit für ein Beratungsgespräch, um Deine Wünsche zu verstehen. Danach erstellen wir einen individuellen Plan für Dich.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <span>Bin ich ein guter Kandidat?</span>
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">
+        Die meisten Erwachsenen sind geeignet. Schwangere, stillende Frauen und Menschen mit bestimmten Erkrankungen sollten vorab mit uns klären. Kostenlose Beratung!
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <span>Kann ich Hyaluron auch versetzen/entfernen?</span>
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">
+        Ja, Hyaluron kann jederzeit mit einer speziellen Lösung aufgelöst werden. Kontaktiere uns, wenn Du Änderungen wünschst.
+      </div>
+    </div>
+  </div>
+
+  <!-- INFO GRID -->
+  <div class="info-grid-block">
+    <h2>Why Choose Us?</h2>
+    <div class="info-grid">
+      <div class="info-item">
+        <h3>ONLY DOCTORS</h3>
+        <p>Nur Ärzte & Fachkräfte mit zertifizierter Ausbildung</p>
+      </div>
+      <div class="info-item">
+        <h3>PREMIUM QUALITY</h3>
+        <p>Hochwertige Materialien & höchste Hygiene-Standards</p>
+      </div>
+      <div class="info-item">
+        <h3>NO APPOINTMENT NEEDED</h3>
+        <p>Walk-In willkommen oder Termin buchen – wie es Dir passt</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA SECTION -->
+  <div class="cta-section" id="booking">
+    <h2>Sichere Dir jetzt 20% Rabatt 🎁</h2>
+    <p>Buche Deinen Termin online – schnell, einfach, ohne Wartezeit.</p>
+    <button class="cta-primary" onclick="window.open('https://calendly.com/aquis-plaza-aachen')">Jetzt Termin buchen →</button>
+    <p style="margin-top: 20px; font-size: 13px; color: #666;">Oder einfach vorbeikommen – Walk-In willkommen! ✓</p>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <p><strong>MY HEALTH & BEAUTY</strong></p>
+    <p>Aquis Plaza Aachen · Adalbertstraße 100 · 52062 Aachen</p>
+    <p style="margin-top: 20px;">Mo – Sa: 10:00 – 20:00 Uhr | Walk-In willkommen</p>
+    <p style="margin-top: 20px; font-size: 11px;">
+      <a href="https://www.myhealthandbeauty.com" style="color: #000;">Website</a> | 
+      <a href="https://www.instagram.com/myhealthandbeauty.app/" style="color: #000;">Instagram</a> | 
+      <a href="https://calendly.com/aquis-plaza-aachen" style="color: #000;">Termin buchen</a>
+    </p>
+  </div>
+
+</div>
+
+<!-- DISCOUNT MODAL -->
+<div class="modal-overlay" id="discountModal">
+  <div style="position: relative;">
+    <div class="modal-close" onclick="closeModal()">×</div>
+    <div class="modal-content">
+      <div class="modal-badge">🎁 WILLKOMMEN ANGEBOT</div>
+      <div class="modal-title">20% Rabatt!</div>
+      <div class="modal-subtitle">Nur für Neukunden in dieser Woche</div>
+      <div class="discount-badge">−20%</div>
+      <div class="modal-text">
+        Buche jetzt Dein Lippen-Treatment und erhalte automatisch 20% Rabatt.<br>
+        <strong>Gültig bis: Sonntag 23:59 Uhr</strong>
+      </div>
+      <input type="email" class="modal-input" placeholder="Deine E-Mail-Adresse" id="modalEmail" />
+      <button class="modal-cta" onclick="claimDiscount()">TERMIN BUCHEN & RABATT SICHERN</button>
+      <p style="margin-top: 12px; font-size: 12px; color: #999;">Rabattcode wird per E-Mail verschickt</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Modal nach 3 Sekunden öffnen
+  setTimeout(() => {
+    document.getElementById('discountModal').classList.add('active');
+  }, 3000);
+
+  function closeModal() {
+    document.getElementById('discountModal').classList.remove('active');
+  }
+
+  function claimDiscount() {
+    const email = document.getElementById('modalEmail').value;
+    if (!email) {
+      alert('Bitte gib Deine E-Mail-Adresse ein');
+      return;
+    }
+    // Öffne Calendly mit Query-Parametern
+    window.open(`https://calendly.com/aquis-plaza-aachen?email=${email}&utm_source=discount_modal&utm_content=20percent`, '_blank');
+    closeModal();
+  }
+
+  function toggleFaq(element) {
+    const answer = element.nextElementSibling;
+    const toggle = element.querySelector('.faq-toggle');
+    answer.classList.toggle('active');
+    toggle.textContent = answer.classList.contains('active') ? '−' : '+';
+  }
+
+  function scrollToBooking() {
+    document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
+  }
+
+  // Modal schließen auf Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeModal();
+  });
+</script>
 
 </body>
 </html>
