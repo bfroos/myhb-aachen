@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lippen aufspritzen Aachen – MY HEALTH & BEAUTY</title>
-    <meta name="description" content="Professionelle Lippenaufspritzung in Aachen. Natürliche Ergebnisse mit Hyaluron. Ab 149€. Kostenlose Beratung!">
+    <meta name="description" content="Professionelle Lippenaufspritzung in Aachen. Ab 149€. Kostenlose Beratung. Jetzt Termin buchen!">
     
     <style>
         * {
@@ -13,90 +13,94 @@
             box-sizing: border-box;
         }
         
-        :root {
-            --gold: #D4A574;
-            --bronze: #8B6F47;
-            --red-cta: #E8424F;
-            --bg-light: #F5F1ED;
-            --dark: #1A1A1A;
-            --gray: #666666;
-        }
-        
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            color: var(--dark);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            color: #000;
             line-height: 1.6;
+            background: #fff;
         }
         
-        h1, h2, h3 {
-            font-family: 'Georgia', serif;
-            font-weight: 600;
-        }
-        
-        /* Header */
+        /* Header - exactly like go. */
         header {
             background: white;
-            padding: 1rem 2rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid #e5e5e5;
             position: sticky;
             top: 0;
             z-index: 100;
         }
         
-        .logo {
-            font-family: Georgia, serif;
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--bronze);
-            letter-spacing: 2px;
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         
-        /* Hero Section - Exactly like go. */
+        .logo {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            color: #000;
+            text-transform: uppercase;
+        }
+        
+        nav {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: #000;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: opacity 0.2s;
+        }
+        
+        nav a:hover {
+            opacity: 0.6;
+        }
+        
+        .header-cta {
+            background: #000;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+        
+        .header-cta:hover {
+            background: #333;
+        }
+        
+        /* Hero Section - exactly like go. screenshot */
         .hero {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
             max-width: 1400px;
             margin: 0 auto;
             padding: 4rem 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
             align-items: center;
-            background: linear-gradient(135deg, var(--bg-light) 0%, #faf8f5 100%);
         }
         
-        .hero-content {
-            max-width: 600px;
-        }
-        
-        .hero-badge {
-            display: inline-block;
-            background: var(--gold);
-            color: white;
-            padding: 0.5rem 1.5rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            margin-bottom: 1.5rem;
-        }
-        
-        .hero h1 {
+        .hero-content h1 {
             font-size: 3rem;
+            font-weight: 700;
             line-height: 1.1;
-            margin-bottom: 1rem;
-            color: var(--dark);
+            margin-bottom: 1.5rem;
+            color: #000;
         }
         
-        .hero-subline {
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: var(--bronze);
-            margin-bottom: 1rem;
-        }
-        
-        .hero-text {
+        .hero-content p {
             font-size: 1.1rem;
-            color: var(--gray);
+            color: #666;
             margin-bottom: 2rem;
             line-height: 1.8;
         }
@@ -104,87 +108,121 @@
         .hero-ctas {
             display: flex;
             gap: 1rem;
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
         }
         
         .btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            padding: 1rem 2.5rem;
+            padding: 1rem 2rem;
             border-radius: 4px;
             text-decoration: none;
             font-weight: 600;
             font-size: 1rem;
-            transition: all 0.3s;
+            transition: all 0.2s;
             border: none;
             cursor: pointer;
-            min-height: 56px;
         }
         
-        .btn-primary {
-            background-color: var(--red-cta);
-            color: white;
-            box-shadow: 0 4px 12px rgba(232, 66, 79, 0.3);
+        .btn-black {
+            background: #000;
+            color: #fff;
         }
         
-        .btn-primary:hover {
-            background-color: #d42f39;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(232, 66, 79, 0.4);
+        .btn-black:hover {
+            background: #333;
         }
         
-        .btn-secondary {
-            background-color: transparent;
-            color: var(--bronze);
-            border: 2px solid var(--bronze);
+        .btn-outline {
+            background: transparent;
+            color: #000;
+            border: 2px solid #000;
         }
         
-        .btn-secondary:hover {
-            background-color: var(--bronze);
-            color: white;
+        .btn-outline:hover {
+            background: #000;
+            color: #fff;
         }
         
         .hero-rating {
             display: flex;
             align-items: center;
             gap: 1rem;
-            padding: 1rem 1.5rem;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-            max-width: fit-content;
         }
         
-        .google-logo {
+        .rating-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem 1.25rem;
+            background: #f8f8f8;
+            border-radius: 8px;
+        }
+        
+        .google-icon {
             width: 24px;
             height: 24px;
         }
         
-        .rating-text {
-            font-size: 0.95rem;
-            font-weight: 600;
-            color: var(--dark);
-        }
-        
         .stars {
             color: #FBB040;
-            font-size: 1.1rem;
-            letter-spacing: 2px;
+            font-size: 1rem;
+            letter-spacing: 1px;
+        }
+        
+        .rating-text {
+            font-size: 0.9rem;
+            color: #000;
+            font-weight: 600;
         }
         
         .hero-image {
             position: relative;
-            border-radius: 16px;
+            border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.12);
         }
         
         .hero-image img {
             width: 100%;
             height: auto;
             display: block;
-            object-fit: cover;
+        }
+        
+        /* Trust Symbols - like go. */
+        .trust-section {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+            text-align: center;
+            border-top: 1px solid #e5e5e5;
+        }
+        
+        .trust-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #999;
+            margin-bottom: 2rem;
+        }
+        
+        .trust-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .trust-logo {
+            height: 32px;
+            opacity: 0.4;
+            transition: opacity 0.2s;
+        }
+        
+        .trust-logo:hover {
+            opacity: 0.8;
         }
         
         /* Responsive */
@@ -195,7 +233,7 @@
                 padding: 3rem 1.5rem;
             }
             
-            .hero h1 {
+            .hero-content h1 {
                 font-size: 2.2rem;
             }
             
@@ -206,73 +244,93 @@
             .btn {
                 width: 100%;
             }
+            
+            nav {
+                display: none;
+            }
         }
         
-        /* Placeholder for more blocks */
-        .section {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-        }
-        
-        .coming-soon {
+        /* Placeholder */
+        .placeholder {
             text-align: center;
             padding: 4rem 2rem;
-            background: var(--bg-light);
-            color: var(--gray);
+            background: #f8f8f8;
+            color: #666;
             font-style: italic;
         }
     </style>
 </head>
 <body>
 
-    <!-- Header -->
+    <!-- Header - exactly like go. -->
     <header>
-        <div class="logo">MY HEALTH & BEAUTY</div>
+        <div class="header-content">
+            <div class="logo">MY HEALTH & BEAUTY</div>
+            <nav>
+                <a href="#">Botox</a>
+                <a href="#">Hyaluron</a>
+                <a href="#">Haare</a>
+                <a href="#">Fettweg</a>
+                <a href="#">Skinbooster</a>
+            </nav>
+            <a href="#" class="header-cta">Termin buchen</a>
+        </div>
     </header>
 
-    <!-- Hero Section - Block 1 -->
+    <!-- Hero Section - Block 1 (exactly like go. screenshot) -->
     <section class="hero">
         <div class="hero-content">
-            <div class="hero-badge">✨ Premium Hyaluron</div>
             <h1>Lippen sanft aufspritzen</h1>
-            <div class="hero-subline">Dein effektiver Weg zum Traumlook!</div>
-            <p class="hero-text">
-                Erlebe bei MY eine kostenlose Beratung für Deine Lippenbehandlung. 
-                Natürliche Ergebnisse mit hochwertigem Hyaluron – durchgeführt von 
-                erfahrenen Fachärzten. <strong>20% Rabatt für Neukunden.</strong>
+            <p>
+                Kostenlose Beratung mit Blick auf Deine Lippenunterspritzung samt Hyaluron. 
+                Mit sichtbaren Ergebnissen dank 20% Rabatt, zu einem günstigen Preis. 
+                Jetzt direkt buchen!
             </p>
             
             <div class="hero-ctas">
-                <a href="#" class="btn btn-primary">Kostenlose Beratung buchen</a>
-                <a href="#" class="btn btn-secondary">20% Rabatt sichern</a>
+                <a href="#" class="btn btn-black">Termin buchen</a>
+                <a href="#" class="btn btn-outline">20% Rabatt</a>
             </div>
             
             <div class="hero-rating">
-                <svg class="google-logo" viewBox="0 0 24 24" fill="none">
-                    <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
-                    <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
-                    <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
-                    <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
-                </svg>
-                <div>
-                    <div class="stars">★★★★★</div>
-                    <div class="rating-text">2.737+ 5-Sterne Bewertungen</div>
+                <div class="rating-badge">
+                    <svg class="google-icon" viewBox="0 0 24 24" fill="none">
+                        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                        <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                        <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                        <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                    </svg>
+                    <div>
+                        <div class="stars">★★★★★</div>
+                        <div class="rating-text">2.737+ Bewertungen</div>
+                    </div>
                 </div>
             </div>
         </div>
         
         <div class="hero-image">
-            <img src="https://media.myhb.app/uploads/lippen_aufspritzen_vorher_nachher_11_b8d80e6b8d.jpg" 
-                 alt="Lippen aufspritzen Vorher Nachher Ergebnis" 
+            <img src="https://media.myhb.app/uploads/lippen_aufspritzen_hero_bbb6819f34.jpg" 
+                 alt="Lippen aufspritzen Aachen"
                  loading="eager">
         </div>
     </section>
 
-    <!-- Placeholder for weitere Blocks -->
-    <div class="coming-soon">
-        <p><strong>Block 2-8 folgen in den nächsten Schritten...</strong></p>
-        <p>Next: Before/After Slider, Benefits, Testimonials, FAQ, Doctor Section, Location Map</p>
+    <!-- Trust Symbols - exactly like go. -->
+    <section class="trust-section">
+        <div class="trust-title">Bekannt aus</div>
+        <div class="trust-logos">
+            <img src="https://media.myhb.app/uploads/logo_wdr_b8e19c4e68.svg" alt="WDR" class="trust-logo">
+            <img src="https://media.myhb.app/uploads/logo_welt_4a7c8f9b23.svg" alt="Die Welt" class="trust-logo">
+            <img src="https://media.myhb.app/uploads/logo_pro7_d9e17f8a45.svg" alt="Pro7" class="trust-logo">
+            <img src="https://media.myhb.app/uploads/logo_focus_e8c19f7d34.svg" alt="Focus" class="trust-logo">
+            <img src="https://media.myhb.app/uploads/logo_stern_f7d18e9c56.svg" alt="Stern" class="trust-logo">
+        </div>
+    </section>
+
+    <!-- Placeholder -->
+    <div class="placeholder">
+        <p><strong>Block 3-9 folgen nach deinem Feedback...</strong></p>
+        <p>Next: Before/After, Benefits (schwarze Box), Testimonials, FAQ, Doctor, Location Map</p>
     </div>
 
 </body>
