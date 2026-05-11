@@ -377,8 +377,7 @@
     .testimonial-card.dark {
       background: #000000;
       color: #ffffff;
-      border-radius: 0; /* No rounded corners for dark card */
-      margin-bottom: 0; /* No gap before next section */
+      border-radius: 16px; /* Rounded corners like other blocks */
     }
 
     .testimonial-icon {
@@ -431,16 +430,17 @@
 
     /* ===== BLOCK 4: TREATMENT DETAILS (Dark Section) ===== */
     .treatment-details {
-      background: #000000; /* Same black as dark testimonial */
+      background: #000000;
       color: #ffffff;
       padding: 60px 20px;
-      margin-top: 0;
+      margin: 40px 20px; /* Gap + side margins for rounded block */
+      border-radius: 16px; /* Rounded corners */
     }
 
-    /* BUG 4 FIX: Smooth transition between sections */
-    .testimonials {
-      margin-bottom: 0;
-      padding-bottom: 0; /* Remove bottom padding */
+    @media (min-width: 768px) {
+      .treatment-details {
+        margin: 60px 40px; /* Larger margins on desktop */
+      }
     }
 
     .treatment-details-container {
@@ -1234,7 +1234,7 @@
   <div class="header">
     <img src="https://mcusercontent.com/414b7df2c15469ac4125b340b/images/b208e29a-c603-5e23-4c98-dd0ee57c64e2.png"
          alt="MY HEALTH &amp; BEAUTY" />
-    <a href="#hero" class="header-cta">JETZT BUCHEN</a>
+    <a href="https://calendly.com/aquis-plaza-aachen" target="_blank" class="header-cta">JETZT BUCHEN</a>
   </div>
 
   <!-- ===== BLOCK 1: HERO ===== -->
@@ -1247,11 +1247,8 @@
         <p>Mit sichtbaren Ergebnissen dank 20% Rabatt, zu einem günstigen Preis.</p>
         
         <div class="hero-buttons">
-          <a href="https://calendly.com/aquis-plaza-aachen" class="btn-primary" target="_blank">
-            Jetzt buchen
-          </a>
-          <button class="btn-secondary" onclick="scrollToDetails()">
-            Mehr Infos
+          <button class="btn-primary" onclick="document.querySelector('.modal').style.display='flex'">
+            20% Rabatt sichern
           </button>
         </div>
 
