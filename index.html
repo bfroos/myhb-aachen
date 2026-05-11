@@ -174,14 +174,26 @@
       aspect-ratio: 1/1;
     }
 
+    /* BUG 1 FIX: Text FIRST on mobile, image AFTER */
     @media (max-width: 767px) {
-      .hero-right {
-        order: -1;
-        width: 100%;
+      .hero-container {
+        flex-direction: column;
       }
 
       .hero-left {
         order: 1;
+        padding: 20px 0 10px 0;
+      }
+
+      .hero-right {
+        order: 2;
+        width: 100%;
+        max-height: 300px;
+      }
+
+      .hero-right img {
+        max-height: 300px;
+        object-fit: cover;
       }
     }
 
@@ -207,6 +219,22 @@
       justify-content: center;
       gap: 30px;
       flex-wrap: wrap;
+    }
+
+    /* BUG 2 FIX: Text-based logos */
+    .trust-logo-text {
+      font-size: 14px;
+      font-weight: 700;
+      color: #999999;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 8px 16px;
+      transition: color 0.3s;
+      display: inline-block;
+    }
+
+    .trust-logo-text:hover {
+      color: #333333;
     }
 
     .trust-logo-img {
@@ -372,6 +400,12 @@
       background: #1a1a1a;
       color: #ffffff;
       padding: 60px 20px;
+      margin-top: 0;
+    }
+
+    /* BUG 4 FIX: Smooth transition between sections */
+    .testimonials {
+      margin-bottom: 0;
     }
 
     .treatment-details-container {
@@ -529,10 +563,12 @@
       background: #999999;
     }
 
+    /* BUG 5 FIX: Carousel card readability */
     .carousel-card {
       flex-shrink: 0;
       width: 100%;
       max-width: 280px;
+      min-width: 280px;
       scroll-snap-align: center;
       background: #ffffff;
       border-radius: 12px;
@@ -565,7 +601,7 @@
     }
 
     .carousel-card-title {
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 700;
       color: #000000;
       margin-bottom: 12px;
@@ -573,7 +609,7 @@
     }
 
     .carousel-card-price {
-      font-size: 14px;
+      font-size: 16px;
       color: #666666;
       font-weight: 600;
     }
@@ -1178,9 +1214,9 @@
           <a href="https://calendly.com/aquis-plaza-aachen" class="btn-primary" target="_blank">
             Jetzt buchen
           </a>
-          <a href="#" class="btn-secondary">
+          <button class="btn-secondary" onclick="scrollToDetails()">
             Mehr Infos
-          </a>
+          </button>
         </div>
 
         <div class="hero-rating">
@@ -1202,11 +1238,11 @@
     <div class="trust-symbols">
       <p>Vertraut von führenden Medien:</p>
       <div class="trust-logos">
-        <img src="https://www.myhealthandbeauty.com/_next/image?url=https%3A%2F%2Fmedia.myhb.app%2Flogo-wdr.svg&w=128&q=75" alt="WDR" class="trust-logo-img" />
-        <img src="https://www.myhealthandbeauty.com/_next/image?url=https%3A%2F%2Fmedia.myhb.app%2Flogo-pro7.svg&w=128&q=75" alt="Pro7" class="trust-logo-img" />
-        <img src="https://www.myhealthandbeauty.com/_next/image?url=https%3A%2F%2Fmedia.myhb.app%2Flogo-focus.svg&w=128&q=75" alt="Focus" class="trust-logo-img" />
-        <img src="https://www.myhealthandbeauty.com/_next/image?url=https%3A%2F%2Fmedia.myhb.app%2Flogo-stern.svg&w=128&q=75" alt="Stern" class="trust-logo-img" />
-        <img src="https://www.myhealthandbeauty.com/_next/image?url=https%3A%2F%2Fmedia.myhb.app%2Flogo-welt.svg&w=128&q=75" alt="Die Welt" class="trust-logo-img" />
+        <span class="trust-logo-text">WDR</span>
+        <span class="trust-logo-text">Pro7</span>
+        <span class="trust-logo-text">Focus</span>
+        <span class="trust-logo-text">Stern</span>
+        <span class="trust-logo-text">Die Welt</span>
       </div>
     </div>
   </div>
@@ -1259,7 +1295,7 @@
   <!-- ===== BLOCK 4: TREATMENT DETAILS (Dark Section) ===== -->
   <div class="treatment-details">
     <div class="treatment-details-container">
-      <h2>Alles, was Du über die Lippenunterspritzung wissen musst</h2>
+      <h2 id="details-section">Alles, was Du über die Lippenunterspritzung wissen musst</h2>
       <div class="details-grid">
         <div class="details-items">
           <div class="detail-item">
@@ -1494,6 +1530,14 @@
     window.open(`https://calendly.com/aquis-plaza-aachen?email=${email}&utm_source=newsletter_modal&utm_content=20percent`, '_blank');
     closeModal();
     alert('✅ Rabattcode wurde an ' + email + ' verschickt!');
+  }
+
+  // BUG 3 FIX: Smooth scroll to details section
+  function scrollToDetails() {
+    const detailsSection = document.querySelector('#details-section');
+    if (detailsSection) {
+      detailsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   }
 
   function scrollCarousel(direction) {
