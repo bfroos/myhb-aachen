@@ -377,6 +377,8 @@
     .testimonial-card.dark {
       background: #000000;
       color: #ffffff;
+      border-radius: 0; /* No rounded corners for dark card */
+      margin-bottom: 0; /* No gap before next section */
     }
 
     .testimonial-icon {
@@ -429,7 +431,7 @@
 
     /* ===== BLOCK 4: TREATMENT DETAILS (Dark Section) ===== */
     .treatment-details {
-      background: #1a1a1a;
+      background: #000000; /* Same black as dark testimonial */
       color: #ffffff;
       padding: 60px 20px;
       margin-top: 0;
@@ -438,6 +440,7 @@
     /* BUG 4 FIX: Smooth transition between sections */
     .testimonials {
       margin-bottom: 0;
+      padding-bottom: 0; /* Remove bottom padding */
     }
 
     .treatment-details-container {
