@@ -309,6 +309,609 @@
       margin-top: 8px;
     }
 
+    /* ===== BLOCK 4: TREATMENT DETAILS (Dark Section) ===== */
+    .treatment-details {
+      background: #1a1a1a;
+      color: #ffffff;
+      padding: 60px 24px;
+    }
+
+    .treatment-details-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .treatment-details h2 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 48px;
+      text-align: center;
+      line-height: 1.3;
+    }
+
+    .details-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .details-items {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .detail-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 24px 20px;
+      background: #252525;
+      border-radius: 12px;
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    .detail-item:hover {
+      transform: translateY(-4px);
+      background: #2a2a2a;
+    }
+
+    .detail-icon {
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+
+    .detail-label {
+      font-size: 13px;
+      color: #cccccc;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+
+    .detail-value {
+      font-size: 18px;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.2;
+    }
+
+    .details-image-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .details-image-wrapper img {
+      max-width: 100%;
+      border-radius: 12px;
+      display: block;
+    }
+
+    /* ===== BLOCK 5: RELATED TREATMENTS CAROUSEL ===== */
+    .carousel-section {
+      background: #ffffff;
+      padding: 60px 24px;
+    }
+
+    .carousel-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .carousel-section h2 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 40px;
+      text-align: center;
+      color: #000000;
+      line-height: 1.3;
+    }
+
+    .carousel-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .carousel-track {
+      display: grid;
+      grid-auto-flow: column;
+      gap: 20px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding: 0;
+      -webkit-overflow-scrolling: touch;
+      scroll-behavior: smooth;
+    }
+
+    .carousel-track::-webkit-scrollbar {
+      height: 6px;
+    }
+    .carousel-track::-webkit-scrollbar-track {
+      background: #f0f0f0;
+      border-radius: 3px;
+    }
+    .carousel-track::-webkit-scrollbar-thumb {
+      background: #cccccc;
+      border-radius: 3px;
+    }
+    .carousel-track::-webkit-scrollbar-thumb:hover {
+      background: #999999;
+    }
+
+    .carousel-card {
+      flex-shrink: 0;
+      width: 100%;
+      max-width: 280px;
+      scroll-snap-align: start;
+      background: #ffffff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .carousel-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    }
+
+    .carousel-card-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .carousel-card-content {
+      padding: 20px;
+    }
+
+    .carousel-card-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #000000;
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+
+    .carousel-card-price {
+      font-size: 14px;
+      color: #666666;
+      font-weight: 600;
+    }
+
+    .carousel-arrow {
+      display: none;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.5);
+      color: white;
+      border: none;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      font-size: 20px;
+      cursor: pointer;
+      z-index: 10;
+      transition: background 0.2s;
+    }
+
+    .carousel-arrow:hover {
+      background: rgba(0,0,0,0.7);
+    }
+
+    .carousel-arrow.left { left: 0; }
+    .carousel-arrow.right { right: 0; }
+
+    /* ===== BLOCK 6: TREATMENT PROCESS ===== */
+    .treatment-process {
+      background: #f8f8f8;
+      padding: 60px 24px;
+    }
+
+    .treatment-process-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .treatment-process h2 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 48px;
+      text-align: center;
+      color: #000000;
+      line-height: 1.3;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 32px;
+    }
+
+    .process-step {
+      background: #ffffff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .process-step:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+
+    .process-step-image {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .process-step-content {
+      padding: 32px 24px;
+    }
+
+    .process-step-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #000000;
+      margin-bottom: 16px;
+      line-height: 1.3;
+    }
+
+    .process-step-text {
+      font-size: 15px;
+      color: #555555;
+      line-height: 1.6;
+    }
+
+    /* ===== BLOCK 7: BENEFITS + IMAGE ===== */
+    .benefits-section {
+      background: #ffffff;
+      padding: 60px 24px;
+    }
+
+    .benefits-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .benefits-image {
+      width: 100%;
+      border-radius: 12px;
+      display: block;
+      object-fit: cover;
+    }
+
+    .benefits-content h2 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #000000;
+      margin-bottom: 32px;
+      line-height: 1.3;
+    }
+
+    .benefits-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .benefit-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .benefit-checkmark {
+      font-size: 24px;
+      color: #000000;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .benefit-text {
+      font-size: 16px;
+      color: #333333;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    /* ===== BLOCK 8: DOCTOR SECTION ===== */
+    .doctor-section {
+      background: #1a1a1a;
+      color: #ffffff;
+      padding: 60px 24px;
+    }
+
+    .doctor-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .doctor-grid {
+      display: grid;
+      grid-template-columns: 40% 60%;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .doctor-image-wrapper {
+      display: flex;
+      justify-content: center;
+    }
+
+    .doctor-image {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      border-radius: 12px;
+      display: block;
+      object-fit: cover;
+    }
+
+    .doctor-content {
+      background: #252525;
+      padding: 40px;
+      border-radius: 12px;
+    }
+
+    .doctor-content h2 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+
+    .doctor-title {
+      font-size: 16px;
+      color: #cccccc;
+      font-weight: 600;
+      margin-bottom: 24px;
+      letter-spacing: 0.5px;
+    }
+
+    .doctor-text {
+      font-size: 15px;
+      color: #bbbbbb;
+      line-height: 1.8;
+      margin-bottom: 32px;
+    }
+
+    .doctor-cta {
+      display: inline-block;
+      background: #ffffff;
+      color: #000000;
+      padding: 14px 40px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: background 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .doctor-cta:hover {
+      background: #f0f0f0;
+    }
+
+    /* ===== RESPONSIVE: Mobile-First ===== */
+    @media (max-width: 767px) {
+      /* Block 4: Treatment Details */
+      .details-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .details-items {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+
+      .detail-item {
+        padding: 20px 16px;
+      }
+
+      .detail-icon {
+        font-size: 28px;
+      }
+
+      .detail-label {
+        font-size: 12px;
+      }
+
+      .detail-value {
+        font-size: 16px;
+      }
+
+      /* Block 5: Carousel */
+      .carousel-card {
+        max-width: 280px;
+      }
+
+      .carousel-arrow {
+        display: none !important;
+      }
+
+      /* Block 6: Process */
+      .process-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .process-step-image {
+        height: 200px;
+      }
+
+      /* Block 7: Benefits */
+      .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .benefits-content h2 {
+        font-size: 24px;
+      }
+
+      .benefits-list {
+        gap: 16px;
+      }
+
+      .benefit-item {
+        gap: 12px;
+      }
+
+      .benefit-text {
+        font-size: 15px;
+      }
+
+      /* Block 8: Doctor */
+      .doctor-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .doctor-image {
+        max-width: 280px;
+      }
+
+      .doctor-content {
+        padding: 28px 20px;
+      }
+
+      .doctor-content h2 {
+        font-size: 24px;
+      }
+
+      /* General blocks */
+      .treatment-details,
+      .carousel-section,
+      .treatment-process,
+      .benefits-section,
+      .doctor-section {
+        padding: 48px 16px;
+      }
+
+      .treatment-details h2,
+      .carousel-section h2,
+      .treatment-process h2 {
+        font-size: 24px;
+        margin-bottom: 32px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      /* Block 4 */
+      .details-items {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .detail-item {
+        padding: 16px 12px;
+      }
+
+      .detail-icon {
+        font-size: 24px;
+      }
+
+      .detail-label {
+        font-size: 11px;
+      }
+
+      .detail-value {
+        font-size: 14px;
+      }
+
+      /* Block 5: Carousel */
+      .carousel-card {
+        max-width: 260px;
+      }
+
+      /* Block 6 */
+      .process-step-content {
+        padding: 24px 16px;
+      }
+
+      .process-step-title {
+        font-size: 16px;
+      }
+
+      .process-step-text {
+        font-size: 14px;
+      }
+
+      /* Block 7 */
+      .benefit-item {
+        gap: 10px;
+      }
+
+      .benefit-checkmark {
+        font-size: 20px;
+      }
+
+      .benefit-text {
+        font-size: 14px;
+      }
+
+      /* Block 8 */
+      .doctor-content {
+        padding: 20px 16px;
+      }
+
+      .doctor-title {
+        font-size: 14px;
+      }
+
+      .doctor-text {
+        font-size: 14px;
+      }
+
+      /* General */
+      .treatment-details,
+      .carousel-section,
+      .treatment-process,
+      .benefits-section,
+      .doctor-section {
+        padding: 40px 16px;
+      }
+
+      .treatment-details h2,
+      .carousel-section h2,
+      .treatment-process h2 {
+        font-size: 20px;
+        margin-bottom: 24px;
+      }
+    }
+
+    /* Desktop: Show carousel arrows */
+    @media (min-width: 768px) {
+      .carousel-arrow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
     /* ===== MODAL STYLES ===== */
     .modal-overlay {
       display: none;
@@ -492,6 +1095,201 @@
         </p>
       </div>
     </div>
+
+  <!-- ===== BLOCK 4: TREATMENT DETAILS (Dark Section) ===== -->
+  <div class="treatment-details">
+    <div class="treatment-details-container">
+      <h2>Alles, was Du über die Lippenunterspritzung wissen musst</h2>
+      <div class="details-grid">
+        <div class="details-items">
+          <div class="detail-item">
+            <div class="detail-icon">⏱️</div>
+            <div class="detail-label">Behandlungsdauer</div>
+            <div class="detail-value">30-45 Minuten</div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-icon">💰</div>
+            <div class="detail-label">Kosten</div>
+            <div class="detail-value">ab 149€</div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-icon">⚡</div>
+            <div class="detail-label">Wirkungseintritt</div>
+            <div class="detail-value">Direkt sichtbar</div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-icon">📅</div>
+            <div class="detail-label">Haltbarkeit</div>
+            <div class="detail-value">6-12 Monate</div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-icon">💉</div>
+            <div class="detail-label">Betäubung</div>
+            <div class="detail-value">Betäubungscreme</div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-icon">✅</div>
+            <div class="detail-label">Ausfallzeit</div>
+            <div class="detail-value">Keine</div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-icon">🚫</div>
+            <div class="detail-label">Nachbehandlung</div>
+            <div class="detail-value">Kein Make-up 48h</div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-icon">👥</div>
+            <div class="detail-label">Geeignet für</div>
+            <div class="detail-value">Alle Hauttypen</div>
+          </div>
+        </div>
+        <div class="details-image-wrapper">
+          <img src="https://media.myhealthandbeauty.app/cdn-cgi/image/width=460,format=auto,quality=85,fit=scale-down/1/22/Injektion_Lippen_a74b51f85d.webp"
+               alt="Lippenunterspritzung Behandlung" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== BLOCK 5: RELATED TREATMENTS CAROUSEL ===== -->
+  <div class="carousel-section">
+    <div class="carousel-container">
+      <h2>Weitere Behandlungen, die Dich interessieren könnten</h2>
+      <div class="carousel-wrapper">
+        <button class="carousel-arrow left" onclick="scrollCarousel('left')">❮</button>
+        <div class="carousel-track" id="carouselTrack">
+          <div class="carousel-card">
+            <img src="https://media.myhealthandbeauty.app/cdn-cgi/image/width=460,format=auto,quality=85,fit=scale-down/Allgemein2_c8b6cee2de.jpg"
+                 alt="Zornesfalte glätten" class="carousel-card-image" />
+            <div class="carousel-card-content">
+              <div class="carousel-card-title">Zornesfalte glätten</div>
+              <div class="carousel-card-price">ab 149€</div>
+            </div>
+          </div>
+          <div class="carousel-card">
+            <img src="https://media.myhealthandbeauty.app/cdn-cgi/image/width=460,format=auto,quality=85,fit=scale-down/Stirnfalte_2d2d1ba329.jpg"
+                 alt="Stirnfalten glätten" class="carousel-card-image" />
+            <div class="carousel-card-content">
+              <div class="carousel-card-title">Stirnfalten glätten</div>
+              <div class="carousel-card-price">ab 149€</div>
+            </div>
+          </div>
+          <div class="carousel-card">
+            <img src="https://media.myhealthandbeauty.app/cdn-cgi/image/width=460,format=auto,quality=85,fit=scale-down/Profhilo_f6314d07ed.jpg"
+                 alt="Profhilo" class="carousel-card-image" />
+            <div class="carousel-card-content">
+              <div class="carousel-card-title">Profhilo</div>
+              <div class="carousel-card-price">ab 249€</div>
+            </div>
+          </div>
+          <div class="carousel-card">
+            <img src="https://media.myhealthandbeauty.app/cdn-cgi/image/width=460,format=auto,quality=85,fit=scale-down/Allgemein3_dcf97ea3d4.jpg"
+                 alt="Nasolabialfalte glätten" class="carousel-card-image" />
+            <div class="carousel-card-content">
+              <div class="carousel-card-title">Nasolabialfalte glätten</div>
+              <div class="carousel-card-price">ab 179€</div>
+            </div>
+          </div>
+          <div class="carousel-card">
+            <img src="https://media.myhealthandbeauty.app/cdn-cgi/image/width=460,format=auto,quality=85,fit=scale-down/Vitamin_Infusionen_placeholder.jpg"
+                 alt="Vitamin Infusionen" class="carousel-card-image" />
+            <div class="carousel-card-content">
+              <div class="carousel-card-title">Vitamin Infusionen</div>
+              <div class="carousel-card-price">ab 99€</div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-arrow right" onclick="scrollCarousel('right')">❯</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== BLOCK 6: TREATMENT PROCESS ===== -->
+  <div class="treatment-process">
+    <div class="treatment-process-container">
+      <h2>Der Ablauf Deiner Behandlung</h2>
+      <div class="process-grid">
+        <div class="process-step">
+          <img src="https://media.myhealthandbeauty.app/cdn-cgi/image/width=460,format=auto,quality=85,fit=scale-down/1/22/erstberatung_Lippen_71583f1ddb.webp"
+               alt="Vor der Behandlung" class="process-step-image" />
+          <div class="process-step-content">
+            <div class="process-step-title">Vor der Behandlung</div>
+            <div class="process-step-text">Kostenlose Erstberatung ohne Behandlungsdruck. Ehrliche Einschätzung von Fachärzten.</div>
+          </div>
+        </div>
+        <div class="process-step">
+          <img src="https://media.myhealthandbeauty.app/cdn-cgi/image/width=460,format=auto,quality=85,fit=scale-down/1/22/Behandlung_Lippen_5e80b3faed.webp"
+               alt="Während der Behandlung" class="process-step-image" />
+          <div class="process-step-content">
+            <div class="process-step-title">Während der Behandlung</div>
+            <div class="process-step-text">Präzise Injektion mit feinster Kanüle. Betäubungscreme für schmerzarme Behandlung.</div>
+          </div>
+        </div>
+        <div class="process-step">
+          <img src="https://media.myhealthandbeauty.app/cdn-cgi/image/width=460,format=auto,quality=85,fit=scale-down/1/22/Nachsorge_Lippen_51cd77726f.webp"
+               alt="Nachsorge und Ergebnisse" class="process-step-image" />
+          <div class="process-step-content">
+            <div class="process-step-title">Nachsorge und Ergebnisse</div>
+            <div class="process-step-text">Kein Make-up 48h, keine UV-Strahlung 1 Woche. Ergebnis direkt sichtbar!</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== BLOCK 7: BENEFITS + IMAGE ===== -->
+  <div class="benefits-section">
+    <div class="benefits-container">
+      <div class="benefits-grid">
+        <img src="https://media.myhealthandbeauty.app/cdn-cgi/image/width=800,format=auto,quality=85,fit=scale-down/1/2/Screenshot_2026_02_03_at_14_16_41_dbcad724a9.png"
+             alt="Lippenbehandlung Vorher-Nachher" class="benefits-image" />
+        <div class="benefits-content">
+          <h2>Die Vorteile der Lippenbehandlung mit Hyaluron</h2>
+          <div class="benefits-list">
+            <div class="benefit-item">
+              <div class="benefit-checkmark">✓</div>
+              <div class="benefit-text">Natürliche Ergebnisse ohne 'Duckface'</div>
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-checkmark">✓</div>
+              <div class="benefit-text">Schnelle und langanhaltende Ergebnisse</div>
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-checkmark">✓</div>
+              <div class="benefit-text">Minimalinvasiv mit minimalen Risiken</div>
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-checkmark">✓</div>
+              <div class="benefit-text">Erfahrene Fachärzte mit Spezialisierung</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== BLOCK 8: DOCTOR SECTION ===== -->
+  <div class="doctor-section">
+    <div class="doctor-container">
+      <div class="doctor-grid">
+        <div class="doctor-image-wrapper">
+          <img src="https://media.myhb.app/cdn-cgi/image/width=460,format=auto,quality=85,fit=scale-down/6/dr_gero_ruppert_54fc7b563a.png"
+               alt="Dr. Gero Ruppert" class="doctor-image" />
+        </div>
+        <div class="doctor-content">
+          <h2>Dr. Gero Ruppert</h2>
+          <div class="doctor-title">Chefarzt für Plastische & Ästhetische Chirurgie</div>
+          <div class="doctor-text">
+            Bei MY HEALTH & BEAUTY werden alle Behandlungen ausschließlich von erfahrenen Fachärzten durchgeführt. Dr. Gero Ruppert und sein Team haben sich auf minimalinvasive ästhetische Behandlungen spezialisiert und legen größten Wert auf natürliche Ergebnisse.
+            <br/><br/>
+            Ehrliche Beratung steht an erster Stelle - nicht jede Behandlung ist für jeden geeignet. Wir nehmen uns Zeit für Dich und beraten Dich kompetent und ehrlich.
+          </div>
+          <a href="https://calendly.com/aquis-plaza-aachen" class="doctor-cta" target="_blank">Termin vereinbaren</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
   </div>
 
 </div>
@@ -536,6 +1334,16 @@
     window.open(`https://calendly.com/aquis-plaza-aachen?email=${email}&utm_source=newsletter_modal&utm_content=20percent`, '_blank');
     closeModal();
     alert('✅ Rabattcode wurde an ' + email + ' verschickt!');
+
+  function scrollCarousel(direction) {
+    const carousel = document.getElementById('carouselTrack');
+    const scrollAmount = 300;
+    if (direction === 'left') {
+      carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    } else {
+      carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+  }
   }
 </script>
 
