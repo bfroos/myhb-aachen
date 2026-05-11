@@ -48,10 +48,18 @@
     .hero-container {
       max-width: 1200px;
       margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
       align-items: center;
+    }
+
+    @media (min-width: 768px) {
+      .hero-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+      }
     }
 
     .hero-left h2 {
@@ -157,13 +165,24 @@
     }
 
     .hero-right img {
-      width: 100vw;
-      margin-left: calc(-50vw + 50%);
-      border-radius: 0;
+      width: 100%;
+      max-width: 100%;
+      border-radius: 12px;
       display: block;
       object-fit: cover;
       height: auto;
       aspect-ratio: 1/1;
+    }
+
+    @media (max-width: 767px) {
+      .hero-right {
+        order: -1;
+        width: 100%;
+      }
+
+      .hero-left {
+        order: 1;
+      }
     }
 
     /* Trust Symbols */
@@ -212,10 +231,18 @@
     .video-container {
       max-width: 1200px;
       margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
       align-items: center;
+    }
+
+    @media (min-width: 768px) {
+      .video-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+      }
     }
 
     .video-left img {
@@ -223,6 +250,17 @@
       border-radius: 12px;
       display: block;
       object-fit: cover;
+    }
+
+    @media (max-width: 767px) {
+      .video-left {
+        order: -1;
+        width: 100%;
+      }
+
+      .video-right {
+        order: 1;
+      }
     }
 
     .video-right h2 {
@@ -249,9 +287,17 @@
     .testimonials-container {
       max-width: 1200px;
       margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    @media (min-width: 768px) {
+      .testimonials-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+      }
     }
 
     .testimonial-card {
@@ -342,10 +388,18 @@
     }
 
     .details-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      display: flex;
+      flex-direction: column;
       gap: 32px;
       align-items: center;
+    }
+
+    @media (min-width: 768px) {
+      .details-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+      }
     }
 
     .details-items {
@@ -402,6 +456,17 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      width: 100%;
+    }
+
+    @media (max-width: 767px) {
+      .details-image-wrapper {
+        order: -1;
+      }
+
+      .details-items {
+        order: 1;
+      }
     }
 
     .details-image-wrapper img {
@@ -558,9 +623,17 @@
     }
 
     .process-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    @media (min-width: 768px) {
+      .process-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 32px;
+      }
     }
 
     .process-step {
@@ -621,10 +694,18 @@
     }
 
     .benefits-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
       align-items: center;
+    }
+
+    @media (min-width: 768px) {
+      .benefits-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+      }
     }
 
     .benefits-image {
@@ -632,6 +713,16 @@
       border-radius: 12px;
       display: block;
       object-fit: cover;
+    }
+
+    @media (max-width: 767px) {
+      .benefits-image {
+        order: -1;
+      }
+
+      .benefits-content {
+        order: 1;
+      }
     }
 
     .benefits-content h2 {
@@ -683,15 +774,34 @@
     }
 
     .doctor-grid {
-      display: grid;
-      grid-template-columns: 40% 60%;
-      gap: 60px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
       align-items: center;
+    }
+
+    @media (min-width: 768px) {
+      .doctor-grid {
+        display: grid;
+        grid-template-columns: 40% 60%;
+        gap: 60px;
+      }
     }
 
     .doctor-image-wrapper {
       display: flex;
       justify-content: center;
+      width: 100%;
+    }
+
+    @media (max-width: 767px) {
+      .doctor-image-wrapper {
+        order: -1;
+      }
+
+      .doctor-content {
+        order: 1;
+      }
     }
 
     .doctor-image {
@@ -759,26 +869,16 @@
       outline-offset: 2px;
     }
 
-    /* ===== RESPONSIVE: Mobile-First ===== */
+    /* ===== RESPONSIVE: Mobile Fine-Tuning ===== */
     @media (max-width: 767px) {
-      /* Block 1: Hero */
-      .hero-container {
-        grid-template-columns: 1fr;
-      }
-
       .hero-left h1 {
         font-size: 28px;
-      }
-
-      /* Block 4: Treatment Details */
-      .details-grid {
-        grid-template-columns: 1fr;
-        gap: 32px;
       }
 
       .details-items {
         grid-template-columns: 1fr 1fr;
         gap: 16px;
+        width: 100%;
       }
 
       .detail-item {
@@ -797,7 +897,6 @@
         font-size: 16px;
       }
 
-      /* Block 5: Carousel */
       .carousel-card {
         max-width: 280px;
       }
@@ -806,20 +905,8 @@
         display: none !important;
       }
 
-      /* Block 6: Process */
-      .process-grid {
-        grid-template-columns: 1fr;
-        gap: 24px;
-      }
-
       .process-step-image {
         height: 200px;
-      }
-
-      /* Block 7: Benefits */
-      .benefits-grid {
-        grid-template-columns: 1fr;
-        gap: 32px;
       }
 
       .benefits-content h2 {
@@ -838,13 +925,9 @@
         font-size: 15px;
       }
 
-      /* Block 8: Doctor */
-      .doctor-grid {
-        grid-template-columns: 1fr;
-        gap: 32px;
-      }
-
       .doctor-image {
+        width: 140px;
+        height: 140px;
         max-width: 280px;
       }
 
@@ -856,22 +939,12 @@
         font-size: 24px;
       }
 
-      /* General blocks */
       .treatment-details,
       .carousel-section,
       .treatment-process,
       .benefits-section,
       .doctor-section {
         padding: 48px 20px;
-      }
-
-      .doctor-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .doctor-image {
-        width: 140px;
-        height: 140px;
       }
 
       .treatment-details h2,
