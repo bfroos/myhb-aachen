@@ -33,11 +33,43 @@
     /* HEADER */
     .header {
       background: #ffffff;
-      padding: 20px 20px;
-      text-align: center;
+      padding: 16px 20px;
       border-bottom: 1px solid #f0f0f0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
     }
-    .header img { max-width: 160px; display: block; margin: 0 auto; }
+    .header img { 
+      max-width: 120px; 
+      height: auto;
+    }
+    .header-cta {
+      background: #000000;
+      color: #ffffff;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .header-cta:hover {
+      background: #333333;
+      transform: translateY(-2px);
+    }
+    .header-cta:focus {
+      outline: 2px solid #000000;
+      outline-offset: 2px;
+    }
+    @media (max-width: 480px) {
+      .header img { max-width: 100px; }
+      .header-cta { font-size: 13px; padding: 10px 20px; }
+    }
 
     /* ===== BLOCK 1: HERO ===== */
     .hero {
@@ -1199,6 +1231,7 @@
   <div class="header">
     <img src="https://mcusercontent.com/414b7df2c15469ac4125b340b/images/b208e29a-c603-5e23-4c98-dd0ee57c64e2.png"
          alt="MY HEALTH &amp; BEAUTY" />
+    <a href="#hero" class="header-cta">JETZT BUCHEN</a>
   </div>
 
   <!-- ===== BLOCK 1: HERO ===== -->
