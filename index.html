@@ -178,10 +178,17 @@
       flex-wrap: wrap;
     }
 
-    .trust-logos span {
-      font-size: 14px;
-      font-weight: 700;
-      color: #333333;
+    .trust-logo-img {
+      height: 32px;
+      width: auto;
+      opacity: 0.4;
+      transition: opacity 0.3s;
+      object-fit: contain;
+      filter: grayscale(100%);
+    }
+    .trust-logo-img:hover {
+      opacity: 0.7;
+      filter: grayscale(0%);
     }
 
     /* ===== BLOCK 2: VIDEO + TEXT ===== */
@@ -432,11 +439,11 @@
     <div class="trust-symbols">
       <p>Vertraut von führenden Medien:</p>
       <div class="trust-logos">
-        <span>WDR</span>
-        <span>Pro7</span>
-        <span>Focus</span>
-        <span>Stern</span>
-        <span>Die Welt</span>
+        <img src="https://www.myhealthandbeauty.com/_next/image?url=https%3A%2F%2Fmedia.myhb.app%2Flogo-wdr.svg&w=128&q=75" alt="WDR" class="trust-logo-img" />
+        <img src="https://www.myhealthandbeauty.com/_next/image?url=https%3A%2F%2Fmedia.myhb.app%2Flogo-pro7.svg&w=128&q=75" alt="Pro7" class="trust-logo-img" />
+        <img src="https://www.myhealthandbeauty.com/_next/image?url=https%3A%2F%2Fmedia.myhb.app%2Flogo-focus.svg&w=128&q=75" alt="Focus" class="trust-logo-img" />
+        <img src="https://www.myhealthandbeauty.com/_next/image?url=https%3A%2F%2Fmedia.myhb.app%2Flogo-stern.svg&w=128&q=75" alt="Stern" class="trust-logo-img" />
+        <img src="https://www.myhealthandbeauty.com/_next/image?url=https%3A%2F%2Fmedia.myhb.app%2Flogo-welt.svg&w=128&q=75" alt="Die Welt" class="trust-logo-img" />
       </div>
     </div>
   </div>
