@@ -1966,8 +1966,8 @@
         <p>Mit sichtbaren Ergebnissen dank 20% Rabatt, zu einem günstigen Preis.</p>
         
         <div class="hero-buttons">
-          <button class="btn-primary" onclick="document.querySelector('.modal').style.display='flex'">
-            20% Rabatt sichern
+          <button class="btn-primary" onclick="openDiscountModal()">
+            20% RABATT SICHERN
           </button>
         </div>
 
@@ -2445,17 +2445,33 @@
   <div style="position: relative;">
     <div class="modal-close" onclick="closeModal()">×</div>
     <div class="modal-content">
-      <div class="modal-badge">🎁 WILLKOMMEN ANGEBOT</div>
-      <div class="modal-title">20% Rabatt!</div>
-      <div class="modal-subtitle">Nur für Neukunden – limitiert</div>
-      <div class="discount-badge">−20%</div>
-      <div class="modal-text">
-        Sichere Dir 20% Rabatt auf Deine erste Behandlung!<br/>
-        <strong>Newsletter abonnieren &amp; Rabattcode erhalten</strong>
+      <!-- Initial Form State -->
+      <div id="modalFormState">
+        <div class="modal-badge">🎁 WILLKOMMEN ANGEBOT</div>
+        <div class="modal-title">20% Rabatt sichern!</div>
+        <div class="modal-subtitle">Nur für Neukunden – limitiert</div>
+        <div class="discount-badge">−20%</div>
+        <div class="modal-text">
+          Melde dich zu unserem Newsletter an und erhalte sofort Deinen persönlichen 20% Rabattcode
+        </div>
+        <input type="email" class="modal-input" placeholder="Deine E-Mail-Adresse" id="modalEmail" />
+        <div id="emailError" style="color: #e74c3c; font-size: 12px; margin-bottom: 12px; display: none;">Bitte gib eine gültige E-Mail-Adresse ein</div>
+        <button class="modal-cta" onclick="claimDiscount()">Code anfordern</button>
+        <button class="modal-cta" style="background: #f0f0f0; color: #000; margin-top: 12px;" onclick="closeModal()">Später</button>
+        <p style="margin-top: 12px; font-size: 12px; color: #999;">Rabattcode wird sofort per E-Mail verschickt</p>
       </div>
-      <input type="email" class="modal-input" placeholder="Deine E-Mail-Adresse" id="modalEmail" />
-      <button class="modal-cta" onclick="claimDiscount()">NEWSLETTER &amp; RABATT SICHERN</button>
-      <p style="margin-top: 12px; font-size: 12px; color: #999;">Rabattcode wird sofort per E-Mail verschickt</p>
+
+      <!-- Success State -->
+      <div id="modalSuccessState" style="display: none;">
+        <div style="font-size: 48px; margin-bottom: 16px;">🎉</div>
+        <div class="modal-title">Dein 20% Rabattcode:</div>
+        <div style="background: #f0f0f0; padding: 20px; border-radius: 8px; margin: 20px 0; font-family: 'Courier New', monospace; font-size: 24px; font-weight: 700; word-break: break-all;" id="discountCodeDisplay">LIPPEN20ABC</div>
+        <button class="modal-cta" onclick="copyDiscountCode()">📋 Kopieren</button>
+        <button class="modal-cta" style="background: #000; margin-top: 12px;" onclick="openBooking()">Jetzt Termin buchen</button>
+        <div style="margin-top: 16px; padding: 12px; background: #f0f0f0; border-radius: 8px; font-size: 12px; color: #666;">
+          Der Code wird auch an deine E-Mail verschickt
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -2550,23 +2566,82 @@
     document.getElementById('discountModal').classList.add('active');
   }, 30000);
 
+  function openDiscountModal() {
+    document.getElementById('discountModal').classList.add('active');
+    document.getElementById('modalFormState').style.display = 'block';
+    document.getElementById('modalSuccessState').style.display = 'none';
+    document.getElementById('modalEmail').value = '';
+    document.getElementById('emailError').style.display = 'none';
+    document.getElementById('modalEmail').focus();
+  }
+
   function closeModal() {
     document.getElementById('discountModal').classList.remove('active');
   }
 
+  function generateDiscountCode() {
+    const prefix = 'LIPPEN20';
+    const randomPart = Math.random().toString(36).substring(2, 5).toUpperCase();
+    const timestamp = Math.floor(Math.random() * 900) + 100;
+    return `${prefix}${randomPart}${timestamp}`;
+  }
+
+  function validateEmail(email) {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(email);
+  }
+
   function claimDiscount() {
     const email = document.getElementById('modalEmail').value;
-    if (!email || !email.includes('@')) {
-      alert('Bitte gib eine gültige E-Mail-Adresse ein');
+    const emailError = document.getElementById('emailError');
+    
+    if (!email || !validateEmail(email)) {
+      emailError.style.display = 'block';
+      document.getElementById('modalEmail').focus();
       return;
     }
-    // Get current location's Calendly URL
+    
+    emailError.style.display = 'none';
+    
+    // Generate discount code
+    const discountCode = generateDiscountCode();
+    document.getElementById('discountCodeDisplay').textContent = discountCode;
+    
+    // Store for later use
+    window.currentDiscountCode = discountCode;
+    window.currentEmail = email;
+    
+    // Show success state
+    document.getElementById('modalFormState').style.display = 'none';
+    document.getElementById('modalSuccessState').style.display = 'block';
+    
+    // In production, send email here with API call
+    console.log(`Discount code ${discountCode} would be sent to ${email}`);
+  }
+
+  function copyDiscountCode() {
+    const discountCode = document.getElementById('discountCodeDisplay').textContent;
+    navigator.clipboard.writeText(discountCode).then(() => {
+      const button = event.target;
+      const originalText = button.textContent;
+      button.textContent = '✅ Kopiert!';
+      setTimeout(() => {
+        button.textContent = originalText;
+      }, 2000);
+    }).catch(() => {
+      alert('Code: ' + discountCode);
+    });
+  }
+
+  function openBooking() {
     const currentLocation = getLocationParam();
     const config = locations[currentLocation] || locations.aachen;
-    // Nach Newsletter-Sign-up → Termin buchen öffnen
-    window.open(`${config.calendlyUrl}?email=${email}&utm_source=newsletter_modal&utm_content=20percent`, '_blank');
+    const discountCode = window.currentDiscountCode || 'LIPPEN20';
+    const email = window.currentEmail || '';
+    
+    // Open booking with email and discount code
+    window.open(`${config.calendlyUrl}?email=${email}&utm_source=newsletter_modal&utm_content=20percent&code=${discountCode}`, '_blank');
     closeModal();
-    alert('✅ Rabattcode wurde an ' + email + ' verschickt!');
   }
 
   // BUG 3 FIX: Smooth scroll to details section
