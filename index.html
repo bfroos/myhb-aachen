@@ -2561,10 +2561,22 @@
   // Initialize location on page load
   document.addEventListener('DOMContentLoaded', initializeLocation);
 
-  // Modal nach 30 Sekunden öffnen
-  setTimeout(() => {
-    document.getElementById('discountModal').classList.add('active');
-  }, 30000);
+  // ===== EXIT INTENT TRIGGER =====
+  document.addEventListener('mouseleave', function(e) {
+    if (e.clientY <= 0 && !sessionStorage.getItem('modalShown')) {
+      openDiscountModal();
+      sessionStorage.setItem('modalShown', 'true');
+    }
+  });
+
+  // ===== SCROLL TO BOTTOM TRIGGER =====
+  window.addEventListener('scroll', function() {
+    const scrollPercent = (window.innerHeight + window.scrollY) / document.body.offsetHeight * 100;
+    if (scrollPercent >= 95 && !sessionStorage.getItem('modalShown')) {
+      openDiscountModal();
+      sessionStorage.setItem('modalShown', 'true');
+    }
+  });
 
   function openDiscountModal() {
     document.getElementById('discountModal').classList.add('active');
