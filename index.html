@@ -130,9 +130,12 @@
       }
       .hero-left {
         flex: 1;
+        order: 1;  /* Text LEFT */
       }
       .hero-right {
         flex: 1;
+        order: 2;  /* Bild RIGHT */
+        max-height: auto;  /* Reset mobile limit */
       }
     }
 
@@ -148,7 +151,8 @@
         padding-bottom: 0;
       }
       .hero-right img {
-        position: relative;
+        position: relative;  /* Desktop: normal */
+        max-height: 400px;  /* Desktop kann größer sein */
       }
     }
 
