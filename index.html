@@ -128,6 +128,12 @@
         align-items: center;
         position: relative;
       }
+      .hero-left {
+        flex: 1;
+      }
+      .hero-right {
+        flex: 1;
+      }
     }
 
     .hero-right {
@@ -149,11 +155,11 @@
     /* BUG 1 FIX: Mobile hero image height limit */
     @media (max-width: 767px) {
       .hero-right {
-        max-height: 280px;
+        max-height: 200px;
         padding-bottom: 0;
       }
       .hero-right img {
-        max-height: 280px;
+        max-height: 200px;
       }
     }
 
@@ -277,7 +283,7 @@
       .hero-right img {
         position: relative;
         aspect-ratio: unset;
-        max-height: 280px;
+        max-height: 200px;
       }
     }
 
