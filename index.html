@@ -389,10 +389,132 @@
       margin-bottom: 0;
     }
 
-    /* ===== BLOCK 3: TESTIMONIALS ===== */
+    /* ===== BLOCK 3: PRO/CON SECTION ===== */
+    .procon-section {
+      padding: 60px 20px;
+      background: #ffffff;
+    }
+
+    .procon-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .procon-section h2 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 48px;
+      text-align: center;
+      color: #000000;
+      line-height: 1.3;
+    }
+
+    .procon-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    @media (min-width: 768px) {
+      .procon-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+      }
+    }
+
+    .procon-card {
+      border-radius: 16px;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s, box-shadow 0.3s, outline 0.2s;
+      outline: 2px solid transparent;
+      outline-offset: 2px;
+    }
+
+    .procon-card.suitable {
+      background: #f0f8f4;
+      border: 2px solid #4caf50;
+    }
+
+    .procon-card.unsuitable {
+      background: #1a1a1a;
+      color: #ffffff;
+      border: 2px solid #333333;
+    }
+
+    .procon-card:hover {
+      transform: translateY(-4px);
+      outline: 2px solid #000000;
+    }
+
+    .procon-icon {
+      font-size: 40px;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .procon-card h3 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 24px;
+      line-height: 1.3;
+    }
+
+    .procon-card.suitable h3 {
+      color: #2e7d32;
+    }
+
+    .procon-card.unsuitable h3 {
+      color: #ffffff;
+    }
+
+    .procon-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .procon-list li {
+      font-size: 15px;
+      line-height: 1.6;
+      font-weight: 500;
+    }
+
+    .procon-card.suitable .procon-list li {
+      color: #333333;
+    }
+
+    .procon-card.unsuitable .procon-list li {
+      color: #cccccc;
+    }
+
+    @media (max-width: 767px) {
+      .procon-section {
+        padding: 48px 20px;
+      }
+
+      .procon-section h2 {
+        font-size: 24px;
+        margin-bottom: 32px;
+      }
+
+      .procon-card {
+        padding: 32px 24px;
+      }
+
+      .procon-list li {
+        font-size: 14px;
+      }
+    }
+
+    /* ===== BLOCK 3B: TESTIMONIALS ===== */
     .testimonials {
       padding: 60px 20px 80px 20px;
-      background: #ffffff;
+      background: #f8f8f8;
     }
 
     .testimonials-container {
@@ -403,11 +525,25 @@
       gap: 20px;
     }
 
+    .testimonials-container h2 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 40px;
+      text-align: center;
+      color: #000000;
+      line-height: 1.3;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
     @media (min-width: 768px) {
-      .testimonials-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 24px;
+      .testimonials-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
       }
     }
 
@@ -418,29 +554,38 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
-    }
-
-    .testimonial-card.light {
       background: #ffffff;
-      border: 1px solid #f0f0f0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      transition: transform 0.3s, box-shadow 0.3s, outline 0.2s;
+      outline: 2px solid transparent;
+      outline-offset: 2px;
     }
 
-    .testimonial-card.dark {
-      background: #000000;
-      color: #ffffff;
-      border-radius: 16px; /* Rounded corners like other blocks */
+    .testimonial-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      outline: 2px solid #000000;
     }
 
     .testimonial-icon {
       font-size: 32px;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
     }
 
     .testimonial-card h3 {
       font-size: 18px;
       font-weight: 700;
-      margin-bottom: 16px;
+      margin-bottom: 8px;
       line-height: 1.3;
+      color: #000000;
+    }
+
+    .testimonial-stars {
+      color: #ffc107;
+      font-size: 14px;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+      display: block;
     }
 
     .testimonial-card p {
@@ -448,35 +593,22 @@
       line-height: 1.7;
       margin-bottom: 20px;
       flex-grow: 1;
-    }
-
-    .testimonial-card.light p {
       color: #555555;
     }
 
-    .testimonial-card.dark p {
-      color: #cccccc;
-    }
+    @media (max-width: 767px) {
+      .testimonials-container h2 {
+        font-size: 24px;
+        margin-bottom: 32px;
+      }
 
-    .testimonial-author {
-      font-size: 14px;
-      font-weight: 600;
-      margin-top: auto;
-    }
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
 
-    .testimonial-card.light .testimonial-author {
-      color: #000000;
-    }
-
-    .testimonial-card.dark .testimonial-author {
-      color: #ffffff;
-    }
-
-    .testimonial-stars {
-      color: #ffc107;
-      font-size: 14px;
-      letter-spacing: 1px;
-      margin-top: 8px;
+      .testimonial-card {
+        padding: 32px 24px;
+      }
     }
 
     /* ===== BLOCK 4: TREATMENT DETAILS (Dark Section) ===== */
@@ -2056,29 +2188,75 @@
     </div>
   </div>
 
-  <!-- ===== BLOCK 3: TESTIMONIALS ===== -->
-  <div class="testimonials">
-    <div class="testimonials-container">
-      <div class="testimonial-card light">
-        <div class="testimonial-icon">👍</div>
-        <h3>Das sagen unsere Kunden</h3>
-        <p>
-          Ich bin sehr zufrieden mit meiner Behandlung zum Lippenaufspritzen bei Dr. Bachar Wahbeh. 
-          Die Beratung war kompetent und ehrlich, Dr. Wahbeh hat sich viel Zeit genommen.
-        </p>
-        <div class="testimonial-author">
-          Jennifer S.
-          <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+  <!-- ===== BLOCK 3: PRO/CON BLOCK - For Whom This Treatment Is Suitable ===== -->
+  <div class="procon-section">
+    <div class="procon-container">
+      <h2>Für wen ist die Lippenunterspritzung geeignet?</h2>
+      <div class="procon-grid">
+        <!-- GREEN: Suitable For -->
+        <div class="procon-card suitable">
+          <div class="procon-icon">👍</div>
+          <h3>Für wen geeignet</h3>
+          <ul class="procon-list">
+            <li>✓ Reife Haut (ab 25 Jahren)</li>
+            <li>✓ Erstes Mal Hyaluron?</li>
+            <li>✓ Natürlicher Look gewünscht</li>
+            <li>✓ Minimale Ausfallzeit erwünscht</li>
+            <li>✓ Dünne oder schmale Lippen</li>
+            <li>✓ Lippenkonturen definieren</li>
+          </ul>
+        </div>
+        <!-- BLACK: Not Suitable For -->
+        <div class="procon-card unsuitable">
+          <div class="procon-icon">👎</div>
+          <h3>Nicht geeignet für</h3>
+          <ul class="procon-list">
+            <li>✕ Schwangerschaft/Stillzeit</li>
+            <li>✕ Blutgerinnungsstörungen</li>
+            <li>✕ Allergien gegen Hyaluron</li>
+            <li>✕ Aktive Hautinfektionen</li>
+            <li>✕ Starke Lippenentzündung</li>
+            <li>✕ Fieber oder akute Krankheit</li>
+          </ul>
         </div>
       </div>
+    </div>
+  </div>
 
-      <div class="testimonial-card dark">
-        <div class="testimonial-icon">👎</div>
-        <h3>Wann ist eine andere Behandlung besser geeignet?</h3>
-        <p>
-          Bei sehr tiefen Falten oder starkem Volumenverlust können andere Behandlungen wie Filler kombiniert werden. 
-          Wir beraten Dich ehrlich.
-        </p>
+  <!-- ===== BLOCK 3B: TESTIMONIALS SECTION ===== -->
+  <div class="testimonials">
+    <div class="testimonials-container">
+      <h2>Das sagen unsere Kunden</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-icon">⭐</div>
+          <h3>Jennifer S.</h3>
+          <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+          <p>
+            Ich bin sehr zufrieden mit meiner Behandlung zum Lippenaufspritzen bei Dr. Bachar Wahbeh. 
+            Die Beratung war kompetent und ehrlich, Dr. Wahbeh hat sich viel Zeit genommen.
+          </p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-icon">⭐</div>
+          <h3>Maria L.</h3>
+          <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+          <p>
+            Natürliche Ergebnisse, kein 'Duckface'. Das Team war super freundlich und ich konnte sofort wieder arbeiten. 
+            Genau das, was ich mir vorgestellt habe!
+          </p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-icon">⭐</div>
+          <h3>Sophie M.</h3>
+          <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+          <p>
+            Die Beratung war ausgezeichnet. Dr. Ruppert hat genau erklärt, was für meine Lippen perfekt passt. 
+            Absolut zu empfehlen!
+          </p>
+        </div>
       </div>
     </div>
 
