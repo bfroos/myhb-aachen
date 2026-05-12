@@ -2563,18 +2563,16 @@
 
   // ===== EXIT INTENT TRIGGER =====
   document.addEventListener('mouseleave', function(e) {
-    if (e.clientY <= 0 && !sessionStorage.getItem('modalShown')) {
+    if (e.clientY <= 0 && !sessionStorage.getItem('modalSubmitted')) {
       openDiscountModal();
-      sessionStorage.setItem('modalShown', 'true');
     }
   });
 
   // ===== SCROLL TO BOTTOM TRIGGER =====
   window.addEventListener('scroll', function() {
     const scrollPercent = (window.innerHeight + window.scrollY) / document.body.offsetHeight * 100;
-    if (scrollPercent >= 95 && !sessionStorage.getItem('modalShown')) {
+    if (scrollPercent >= 95 && !sessionStorage.getItem('modalSubmitted')) {
       openDiscountModal();
-      sessionStorage.setItem('modalShown', 'true');
     }
   });
 
@@ -2589,6 +2587,7 @@
 
   function closeModal() {
     document.getElementById('discountModal').classList.remove('active');
+    // Do NOT set sessionStorage here—user can reopen by clicking the button again
   }
 
   function generateDiscountCode() {
@@ -2622,6 +2621,9 @@
     // Store for later use
     window.currentDiscountCode = discountCode;
     window.currentEmail = email;
+    
+    // LOCK THE MODAL: Only set sessionStorage when user actually submits
+    sessionStorage.setItem('modalSubmitted', 'true');
     
     // Show success state
     document.getElementById('modalFormState').style.display = 'none';
