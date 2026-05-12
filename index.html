@@ -112,6 +112,24 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 60px;
+        align-items: center;
+        position: relative;
+      }
+    }
+
+    .hero-right {
+      position: relative;
+      padding-bottom: 100%;
+    }
+
+    @media (min-width: 768px) {
+      .hero-right {
+        position: relative;
+        height: auto;
+        padding-bottom: 0;
+      }
+      .hero-right img {
+        position: relative;
       }
     }
 
@@ -225,6 +243,10 @@
       object-fit: cover;
       height: auto;
       aspect-ratio: 1/1;
+      position: absolute;
+      z-index: 10;
+      top: 0;
+      left: 0;
     }
 
     /* BUG 1 FIX: Text FIRST on mobile, image AFTER */
@@ -2422,7 +2444,7 @@
 
     <!-- STICKY BOTTOM BAR (Mobile) -->
     <div class="sticky-bottom-bar">
-      <a id="barCall" href="tel:+49241XXX" class="bar-item">
+      <a id="barCall" href="tel:+49241123456" class="bar-item">
         <span class="bar-icon">📞</span>
         <span class="bar-text">Anrufen</span>
       </a>
@@ -2430,7 +2452,7 @@
         <span class="bar-icon">📅</span>
         <span class="bar-text">Termin</span>
       </button>
-      <a id="barWhatsapp" href="https://wa.me/49241XXX" class="bar-item">
+      <a id="barWhatsapp" href="https://wa.me/491628425037" class="bar-item">
         <span class="bar-icon">💬</span>
         <span class="bar-text">WhatsApp</span>
       </a>
@@ -2547,7 +2569,8 @@
     document.getElementById('locationHoursSunday').textContent = config.openingHours.sunday;
 
     // Update sticky bar phone & WhatsApp
-    document.getElementById('barCall').href = 'tel:' + config.phone.replace(/\s+/g, '');
+    const cleanPhone = config.phone.replace(/\s+/g, '');
+    document.getElementById('barCall').href = 'tel:' + cleanPhone;
     document.getElementById('barWhatsapp').href = config.whatsapp;
 
     // Update all Calendly links
