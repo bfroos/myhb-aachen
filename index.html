@@ -2157,6 +2157,7 @@
   </script>
 
   <!-- Service Schema -->
+  <!-- Schema.org Markup: Service -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -2166,6 +2167,137 @@
     "priceRange": "EUR 149+"
   }
   </script>
+
+  <!-- Schema.org Markup: MedicalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "MY HEALTH & BEAUTY - AQUIS PLAZA Aachen",
+    "description": "Lippenunterspritzung mit Hyaluron in Aachen. Kostenlose Beratung von erfahrenen Fachärzten.",
+    "url": "https://aachen.myhealthandbeauty.com",
+    "telephone": "+49-241-412233",
+    "email": "info@myhb.app",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Adalbertstrasse 100",
+      "addressLocality": "Aachen",
+      "addressRegion": "NRW",
+      "postalCode": "52062",
+      "addressCountry": "DE"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "ratingCount": "2737"
+    },
+    "image": "https://media.myhealthandbeauty.app/cdn-cgi/image/width=1200,height=630,format=auto,quality=85,fit=scale-down/1/2/Screenshot_2026_02_03_at_14_16_41_dbcad724a9.png"
+  }
+  </script>
+
+  <!-- Schema.org Markup: AggregateRating -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "ratingCount": "2737",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
+  </script>
+
+  <!-- Schema.org Markup: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://myhealthandbeauty.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Lippen",
+        "item": "https://myhealthandbeauty.com/lippen"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Aachen",
+        "item": "https://aachen.myhealthandbeauty.com"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Schema.org Markup: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Wie lange halten Hyaluronsäure-Lippen-Injektionen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Typischerweise halten die Ergebnisse 6-12 Monate, abhängig von Ihrem Stoffwechsel und der Technik."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Tut die Behandlung weh?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Wir verwenden Schmerzcremes und sanfte Techniken. Die meisten Patienten berichten von minimalen Beschwerden."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Gibt es Ausfallzeiten?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Minimal — Sie können normalerweise sofort nach der Behandlung Ihre Aktivitäten fortsetzen. Leichte Schwellungen klingen schnell ab."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ist die Behandlung sicher?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, Hyaluronsäure ist natürlich und sicher. Wir verwenden FDA-zugelassene Produkte und haben erfahrenes Fachpersonal."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kann ich meine vorherige Behandlung fortsetzen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, viele Patienten erhalten regelmäßig Wartungsbehandlungen, um ihre gewünschten Ergebnisse zu halten."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLACEHOLDER"></script>
+  <script>
+    // Initialize GA4 tracking
+    window.ga4Ready = false;
+    window.gtag = window.gtag || function() {
+      (window.dataLayer = window.dataLayer || []).push(arguments);
+    };
+    gtag('js', new Date());
+    // Configuration will be set after Measurement ID is provided
+    window.ga4Ready = true;
+  </script>
+
 </head>
 <body>
 <div class="page-wrapper">
@@ -2365,7 +2497,7 @@
     <div class="carousel-container">
       <h2>Weitere Behandlungen, die Dich interessieren könnten</h2>
       <div class="carousel-wrapper">
-        <button class="carousel-arrow left" onclick="scrollCarousel('left')">❮</button>
+        <button class="carousel-arrow left" onclick="scrollCarousel('left')" aria-label="Vorherige Behandlungen anzeigen">❮</button>
         <div class="carousel-track" id="carouselTrack">
           <div class="carousel-card">
             <img src="https://media.myhealthandbeauty.app/cdn-cgi/image/width=460,format=auto,quality=85,fit=scale-down/Allgemein2_c8b6cee2de.jpg"
@@ -2408,7 +2540,7 @@
             </div>
           </div>
         </div>
-        <button class="carousel-arrow right" onclick="scrollCarousel('right')">❯</button>
+        <button class="carousel-arrow right" onclick="scrollCarousel('right')" aria-label="Nächste Behandlungen anzeigen">❯</button>
       </div>
     </div>
   </div>
@@ -2710,7 +2842,7 @@
 <!-- DISCOUNT MODAL -->
 <div class="modal-overlay" id="discountModal">
   <div style="position: relative;">
-    <div class="modal-close" onclick="closeModal()">×</div>
+    <button class="modal-close" onclick="closeModal()" aria-label="Modal schließen">×</button>
     <div class="modal-content">
       <!-- Initial Form State -->
       <div id="modalFormState">
@@ -2957,8 +3089,103 @@
     // Toggle current item
     if (!isActive) {
       faqItem.classList.add('active');
+      // GA4 Event: FAQ Open
+      if (window.ga4Ready && typeof gtag === 'function') {
+        const questionText = faqItem.querySelector('.faq-question')?.textContent || 'Unknown';
+        gtag('event', 'faq_open', {
+          'question': questionText,
+          'event_category': 'engagement'
+        });
+      }
     }
   }
+
+  // GA4 Event Tracking Functions
+  function trackCtaClick(ctaName) {
+    if (window.ga4Ready && typeof gtag === 'function') {
+      gtag('event', 'click_cta', {
+        'cta_location': ctaName,
+        'event_category': 'engagement'
+      });
+    }
+  }
+
+  function trackDiscountOfferClick() {
+    if (window.ga4Ready && typeof gtag === 'function') {
+      gtag('event', 'click_discount_offer', {
+        'offer': '20% Rabatt',
+        'event_category': 'engagement'
+      });
+    }
+  }
+
+  function trackPhoneClick() {
+    if (window.ga4Ready && typeof gtag === 'function') {
+      gtag('event', 'click_phone', {
+        'phone_number': '+49-241-412233',
+        'event_category': 'engagement'
+      });
+    }
+  }
+
+  function trackBookingClick(bookingType) {
+    if (window.ga4Ready && typeof gtag === 'function') {
+      gtag('event', 'click_booking', {
+        'booking_type': bookingType,
+        'event_category': 'engagement'
+      });
+    }
+  }
+
+  function trackCarouselNavigate(direction, currentIndex) {
+    if (window.ga4Ready && typeof gtag === 'function') {
+      gtag('event', 'carousel_navigate', {
+        'direction': direction,
+        'current_index': currentIndex,
+        'event_category': 'engagement'
+      });
+    }
+  }
+
+  // Instrument existing CTA buttons with GA4 tracking
+  document.addEventListener('DOMContentLoaded', function() {
+    // Header CTA
+    const headerCta = document.getElementById('headerCta');
+    if (headerCta) {
+      headerCta.addEventListener('click', function() {
+        trackCtaClick('header');
+        trackBookingClick('calendly');
+      });
+    }
+    
+    // Carousel buttons
+    const carouselLeft = document.querySelector('[onclick="scrollCarousel(\'left\')"]');
+    const carouselRight = document.querySelector('[onclick="scrollCarousel(\'right\')"]');
+    if (carouselLeft) {
+      carouselLeft.addEventListener('click', function() {
+        trackCarouselNavigate('left', 0);
+      });
+    }
+    if (carouselRight) {
+      carouselRight.addEventListener('click', function() {
+        trackCarouselNavigate('right', 0);
+      });
+    }
+    
+    // Phone link
+    const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
+    phoneLinks.forEach(link => {
+      link.addEventListener('click', trackPhoneClick);
+    });
+    
+    // Booking/Calendly links
+    const bookingLinks = document.querySelectorAll('a[href*="calendly"]');
+    bookingLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        trackBookingClick('calendly');
+      });
+    });
+  });
 </script>
 
 </body>
