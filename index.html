@@ -54,45 +54,60 @@
     /* HEADER */
     .header {
       background: #ffffff;
-      padding: 12px 20px;
+      padding: 16px 40px;
       border-bottom: 1px solid #f0f0f0;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 16px;
+      gap: 24px;
       position: relative;
       z-index: 100;
+      max-width: 1400px;
+      margin: 0 auto;
     }
     .header img { 
-      max-width: 120px; 
+      max-width: 140px; 
       height: auto;
       flex-shrink: 0;
     }
     .header-cta {
       background: #000000;
       color: #ffffff;
-      padding: 12px 24px;
+      padding: 14px 32px;
       border: none;
       border-radius: 8px;
-      font-size: 14px;
-      font-weight: 600;
+      font-size: 15px;
+      font-weight: 700;
       cursor: pointer;
       white-space: nowrap;
       transition: all 0.3s ease;
       text-decoration: none;
-      display: inline-block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       position: relative;
       z-index: 101;
-      text-decoration: none;
-      display: inline-block;
+      flex-shrink: 0;
+      min-height: 48px;
     }
     .header-cta:hover {
       background: #333333;
       transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
     .header-cta:focus {
       outline: 2px solid #000000;
       outline-offset: 2px;
+    }
+    @media (max-width: 768px) {
+      .header {
+        padding: 12px 20px;
+      }
+      .header img { 
+        max-width: 110px; 
+        flex-shrink: 0;
+      }
+      .header-cta { font-size: 13px; padding: 11px 24px; }
     }
     @media (max-width: 480px) {
       .header {
