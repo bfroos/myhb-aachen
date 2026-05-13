@@ -54,7 +54,7 @@
     /* HEADER */
     .header {
       background: #ffffff;
-      padding: 16px 40px;
+      padding: 14px 40px;
       border-bottom: 1px solid #f0f0f0;
       display: flex;
       justify-content: space-between;
@@ -62,13 +62,18 @@
       gap: 24px;
       position: relative;
       z-index: 100;
-      max-width: 1400px;
-      margin: 0 auto;
+      max-width: 100%;
+      width: 100%;
+      box-sizing: border-box;
     }
     .header img { 
       max-width: 140px; 
-      height: auto;
+      width: auto;
+      height: 50px;
+      object-fit: contain;
+      object-position: left center;
       flex-shrink: 0;
+      display: block;
     }
     .header-cta {
       background: #000000;
